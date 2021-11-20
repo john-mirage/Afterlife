@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+
+  postgresql:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRESQL_NAME}
+      POSTGRES_USER: ${POSTGRESQL_USER}
+      POSTGRES_PASSWORD: ${POSTGRESQL_PASSWORD}
+    volumes:
+      - ./postgresql/data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    command: -c client_encoding='UTF8' -c default_transaction_isolation='read committed' -c timezone='UTC'
