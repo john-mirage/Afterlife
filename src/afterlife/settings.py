@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+from dotenv import dotenv_values
+
+environment = dotenv_values("../../.env")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
+SECRET_KEY = environment['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -77,9 +79,9 @@ WSGI_APPLICATION = 'afterlife.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ['POSTGRESQL_DB'],
-        'USER': os.environ['POSTGRESQL_USER'],
-        'PASSWORD': os.environ['POSTGRESQL_PASSWORD'],
+        'NAME': environment['POSTGRESQL_DB'],
+        'USER': environment['POSTGRESQL_USER'],
+        'PASSWORD': environment['POSTGRESQL_PASSWORD'],
         'HOST': 'localhost',
         'PORT': '5432',
     }
