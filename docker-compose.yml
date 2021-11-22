@@ -6,7 +6,7 @@ services:
     image: postgres:alpine
     restart: always
     environment:
-      POSTGRES_DB: ${POSTGRESQL_NAME}
+      POSTGRES_DB: ${POSTGRESQL_DB}
       POSTGRES_USER: ${POSTGRESQL_USER}
       POSTGRES_PASSWORD: ${POSTGRESQL_PASSWORD}
     volumes:
