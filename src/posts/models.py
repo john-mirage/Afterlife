@@ -19,10 +19,11 @@ class Reference(models.Model):
 
 class Tag(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, unique=True, verbose_name='Nom')
 
     class Meta:
         ordering = ['name']
+        verbose_name = 'Catégorie'
 
     def __str__(self):
         return self.name
