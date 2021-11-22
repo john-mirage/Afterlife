@@ -30,18 +30,20 @@ class Tag(models.Model):
 
 class Post(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    title = models.CharField(max_length=150)
-    slug = models.SlugField(unique=True)
-    excerpt = models.TextField(max_length=255)
-    author = models.ForeignKey(User)
-    tags = models.ManyToManyField(Tag)
+    title = models.CharField(max_length=255, unique=True, verbose_name='Titre')
+    slug = models.SlugField(max_length=255, unique=True)
+    excerpt = models.TextField(max_length=255, verbose_name='Description')
+    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+    tags = models.ManyToManyField(Tag, verbose_name='Catégories')
+    references = models.ManyToManyField(Reference, verbose_name='Références')
     last_updated = models.DateTimeField(auto_now=True)
-    created_on = models.DateTimeField()
-    published = models.BooleanField(default=False)
-    markdown = models.TextField()
+    created_on = models.DateTimeField(blank=True, null=True)
+    published = models.BooleanField(default=False, verbose_name="Publié")
+    markdown = models.TextField(blank=True, verbose_name="Markdown")
 
     class Meta:
         ordering = ['-created_on']
+        verbose_name = 'Article'
 
     def __str__(self):
         return self.title
