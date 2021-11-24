@@ -1,0 +1,18 @@
+<!doctype html>
+
+<html lang="fr" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="description" content="Afterlife is a blog focused on development and linux">
+        {% filter truncatechars_html:55 %}
+        <title>Afterlife - {% block page_name %}{% endblock %}</title>
+        {% endfilter %}
+    </head>
+
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+
+</html>
