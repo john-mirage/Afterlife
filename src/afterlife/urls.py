@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('', include('blog.urls')),
+    path('', views.afterlife_index, name='afterlifeIndex'),
     path('admin/', admin.site.urls),
 ]
