@@ -1,0 +1,22 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="fr" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="description" content="Afterlife is a blog focused on development and linux">
+        <link rel="stylesheet" href="{% static 'global/reset.css' %}">
+        {% filter truncatechars_html:55 %}
+        <title>Afterlife - {% block page_name %}{% endblock %}</title>
+        {% endfilter %}
+    </head>
+
+    <body>
+        <header></header>
+        {% block content %}{% endblock %}
+    </body>
+
+</html>
