@@ -18,5 +18,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path('', views.afterlife_index, name='afterlifeIndex'),
+    path('blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
 ]
