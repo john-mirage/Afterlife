@@ -157,3 +157,6 @@ cython_debug/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Webpack output
+src/static/*
