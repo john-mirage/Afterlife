@@ -1,1 +1,2 @@
-import "./main.scss";
+// Pages
+import './main.css';
