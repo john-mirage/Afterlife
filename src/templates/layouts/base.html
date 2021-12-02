@@ -8,9 +8,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Afterlife is a blog focused on development and linux">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'main.css' %}">
         {% filter truncatechars_html:55 %}
         <title>Afterlife - {% block page_name %}{% endblock %}</title>
@@ -19,9 +16,10 @@
 
     <body class="bg-gray-100">
         {% include "../components/header.html" %}
-        <main>
+        <main class="mt-14 md:mt-16">
             {% block content %}{% endblock %}
         </main>
+        {% include "../components/footer.html" %}
     </body>
 
 </html>
