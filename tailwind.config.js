@@ -9,15 +9,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
-    },
-    extend: {
-      fontFamily: {
-        sans: [
-          "'Poppins'",
-          ...defaultTheme.fontFamily.sans,
-        ],
-      },
+      padding: '1rem',
     },
   },
   variants: {
