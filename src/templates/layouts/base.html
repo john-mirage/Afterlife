@@ -17,12 +17,12 @@
         {% endfilter %}
     </head>
 
-    <body class="bg-gray-100">
-        {% include "../components/header.html" %}
-        <main class="mt-14 md:mt-16">
+    <body class="flex flex-col justify-between bg-background-darkNight min-h-screen">
+        {% include "../partials/header.html" %}
+        <main>
             {% block content %}{% endblock %}
         </main>
-        {% include "../components/footer.html" %}
+        {% include "../partials/footer.html" %}
     </body>
 
 </html>
