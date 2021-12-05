@@ -1,7 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-// line height ratio: 1,428571428571429
-
 module.exports = {
   mode: 'jit',
   purge: [
@@ -9,22 +7,22 @@ module.exports = {
   ],
   darkMode: false,
   theme: {
-    colors: {
-      black: '#000000',
-      white: '#ffffff',
-      primary: '#1565c0',
+    fontFamily: {
+      sans: [
+        "'Inter'",
+        ...defaultTheme.fontFamily.sans,
+      ],
     },
+    container: {
+      center: true,
+    },
+    /*
     textOpacity: {
       'high': '0.87',
       'medium': '0.60',
       'disabled': '0.38',
     },
-    fontFamily: {
-      sans: [
-        "'Roboto'",
-        ...defaultTheme.fontFamily.sans,
-      ],
-    },
+    // line height ratio: 1,428571428571429
     fontSize: {
       headline1: ['6rem', {
         letterSpacing: '-0.09375rem',
@@ -87,10 +85,7 @@ module.exports = {
     minWidth: {
       '16': '4rem',
     },
-    container: {
-      center: true,
-      padding: '1rem',
-    },
+    */
   },
   variants: {
     extend: {},
