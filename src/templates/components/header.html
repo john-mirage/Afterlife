@@ -1,0 +1,33 @@
+<header class="w-full h-14 md:h-16 bg-white shadow-md">
+    <div class="container px-4 lg:px-8 h-full w-full flex justify-between items-center">
+        <h6 class="text-gray-900 font-light text-2xl tracking-tight">Afterlife</h6>
+        <nav class="h-full">
+            <ul class="h-full flex space-x-4 md:space-x-8">
+                <li class="h-full">
+                    <a href="{% url 'afterlifeIndex' %}" class="flex relative items-center h-full">
+                        <span class="font-normal text-gray-900">Accueil</span>
+                        {% if active == "Accueil" %}
+                        <div class="absolute bottom-0 left-0 h-1 w-full bg-gray-900"></div>
+                        {% endif %}
+                    </a>
+                </li>
+                <li class="h-full">
+                    <a href="{% url 'blogIndex' %}" class="flex relative items-center h-full">
+                        <span class="font-normal text-gray-900">Blog</span>
+                        {% if active == "Blog" %}
+                        <div class="absolute bottom-0 left-0 h-1 w-full bg-gray-900"></div>
+                        {% endif %}
+                    </a>
+                </li>
+                <li class="h-full">
+                    <a href="{% url 'notebookIndex' %}" class="flex relative items-center h-full">
+                        <span class="font-normal text-gray-900">Notes</span>
+                        {% if active == "Notes" %}
+                        <div class="absolute bottom-0 left-0 h-1 w-full bg-gray-900"></div>
+                        {% endif %}
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

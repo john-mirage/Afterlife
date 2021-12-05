@@ -2,4 +2,48 @@
 
 {% block page_name %}Blog{% endblock %}
 
-{% block content %}Page d'accueil du blog{% endblock %}
+{% block content %}
+
+{% include "../components/header.html" with active="Blog" %}
+
+<div class="container p-4 xl:px-8">
+    <h1 class="text-6xl font-bold text-gray-900 py-12">Derniers articles</h1>
+</div>
+
+<div class="container p-4 xl:px-8 flex flex-col lg:flex-row">
+
+    <aside class="bg-white shadow-sm rounded w-full lg:w-80 mb-8 lg:mb-0 flex-shrink-0 p-4">
+        <div class="mb-4">
+            <h5 class="text-sm font-medium text-gray-500 mb-1">Recherche</h5>
+            <div class="w-full flex">
+                <input class="w-full px-2 py-1 rounded-l border border-solid border-gray-300" type="text">
+                <button class="px-2 flex-shrink-0 rounded-r bg-gray-200 text-xs">Lancer</button>
+            </div>
+        </div>
+        <div class="mb-4">
+            <h5 class="text-sm font-medium text-gray-500 mb-1">Filtres</h5>
+        </div>
+    </aside>
+
+    <main class="w-full lg:ml-4">
+        <ul class="grid grid-cols-1 xl:grid-cols-2 gap-4">
+            <li class="">
+                {% include "../components/card.html" %}
+            </li>
+            <li class="">
+                {% include "../components/card.html" %}
+            </li>
+            <li class="">
+                {% include "../components/card.html" %}
+            </li>
+            <li class="">
+                {% include "../components/card.html" %}
+            </li>
+        </ul>
+    </main>
+
+</div>
+
+{% include "../components/footer.html" %}
+
+{% endblock %}

@@ -4,6 +4,17 @@
 
 {% block content %}
 
-{% include "../partials/hero.html" %}
+<div class="min-h-screen flex flex-col justify-between">
+
+{% include "../components/header.html" with active="Accueil" %}
+
+<main class="container h-full px-4 xl:px-8 flex flex-col xl:flex-row lg:items-center">
+    {% include "../components/hero.html" %}
+    {% include "../components/last_activities.html" %}
+</main>
+
+{% include "../components/footer.html" %}
+
+</div>
 
 {% endblock %}
