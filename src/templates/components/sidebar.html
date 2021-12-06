@@ -1,0 +1,27 @@
+<aside class="bg-white shadow rounded w-full lg:w-80 mb-8 lg:mb-0 flex-shrink-0 p-4">
+    <div class="mb-4">
+        <h5 class="font-medium text-gray-900 mb-1">Recherche</h5>
+        <input class="w-full rounded border-gray-300" type="text">
+    </div>
+
+    <h5 class="font-medium text-gray-900 mb-1">Filtres</h5>
+
+    <div>
+        <div class="mt-4">
+            <h6 class="text-sm font-medium text-gray-500 mb-1">Trier par</h6>
+            <div class="flex flex-row items-center space-x-2">
+                <input type="radio" id="sortByDateNew" name="sortByDate" value="sortByDateNew">
+                <label class="text-sm text-gray-900" for="sortByDateNew">Date d'ajout (le plus récent)</label>
+            </div>
+            <div class="flex flex-row items-center space-x-2">
+                <input type="radio" id="sortByDateOld" name="sortByDate" value="sortByDateOld">
+                <label class="text-sm text-gray-900" for="sortByDateOld">Date d'ajout (le plus ancien)</label>
+            </div>
+        </div>
+        <div class="mt-4">
+            <h6 class="text-sm font-medium text-gray-500 mb-1">Etiquettes</h6>
+        </div>
+        <button class="w-full font py-2 bg-purple-200 rounded">Filtrer les articles</button>
+    </div>
+    
+</aside>

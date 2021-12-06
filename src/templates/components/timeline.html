@@ -1,9 +1,6 @@
 <section class="mt-8 xl:mt-0 w-full xl:w-1/2 xl:pl-4">
 
-    <div class="flex flex-row justify-center items-center space-x-2 mb-1">
-        <h3 class="font-light text-xl text-center text-gray-900">Flux d'actualité</h3>
-        <a class="rounded bg-gray-200 hover:bg-gray-300 py-1 px-2 text-xs font-medium text-gray-700" href="">Mettre à jour</a>
-    </div>
+    <h3 class="pl-16 font-light text-xl text-center text-gray-900">Flux d'actualité</h3>
 
     <ul class="space-y-4 z-20">
         <li class="flex relative">
@@ -33,5 +30,9 @@
             {% include "../components/card.html" with datePosition="outside" %}
         </li>
     </ul>
+
+    <div class="pl-16">
+        <button class="w-full text-sm py-2 mt-4 bg-gray-200 rounded">Afficher plus d'activités</button>
+    </div>
 
 </section>

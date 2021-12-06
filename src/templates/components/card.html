@@ -2,11 +2,11 @@
     {% if datePosition == "outside" %}
     <p class="mt-5 mb-2 text-gray-500 text-xs font-medium uppercase tracking-wide">Dimanche 15 Décembre 2021</p>
     {% endif %}
-    <div class="p-4 rounded bg-white shadow hover:shadow-xl">
+    <div class="p-4 rounded bg-white shadow">
+        <a href="#" class="block text-lg font-medium">Titre de l'article</a>
         {% if not datePosition %}
-        <p class="text-gray-500 text-xs font-medium uppercase tracking-wide mb-2">Dimanche 15 Décembre 2021</p>
+        <p class="text-gray-500 text-sm font-medium pt-1 pb-2">Dimanche 15 Décembre 2021 - 5 minutes</p>
         {% endif %}
-        <a href="#" class="block text-lg font-medium mb-2">Titre de l'article</a>
         <p class="text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est doloribus nulla, quasi voluptatibus illum quas corrupti cumque, in debitis tempore nihil exercitationem eum quos maiores consequuntur iste, voluptate deserunt eveniet!</p>
         <div class="flex flex-wrap flex-row mt-4 -mb-2">
             <a class="rounded bg-blue-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Linux</a>
