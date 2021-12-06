@@ -9,6 +9,7 @@
     "watch": "webpack watch --config=webpack.development.config.js"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.3.4",
     "autoprefixer": "^10.4.0",
     "css-loader": "^6.5.1",
     "mini-css-extract-plugin": "^2.4.5",
