@@ -10,22 +10,11 @@
 
 <div class="container px-4 xl:px-8">
 
-    <nav class="w-full p-4 bg-white rounded shadow mb-4 flex flex-row justify-between">
-        <div class="flex flex-row items-center">
-            <label class="text-sm font-medium mr-2 text-gray-500" for="sortingMethod-select">Trier les articles par</label>
-            <select class="rounded text-sm font-medium border-gray-300" name="sortingMethods" id="sortingMethod-select">
-                <option class="text-sm font-medium" value="descending">Date d'ajout (le plus récent)</option>
-                <option class="text-sm font-medium" value="ascending">Date d'ajout (le plus ancien)</option>
-            </select>
-        </div>
-        <div>
-            <input class="rounded border-gray-300 text-sm placeholder-gray-500" placeholder="Rechercher un article" type="text">
-            <button class="bg-purple-200 px-4 py-2 ml-2 rounded shadow font-medium text-sm">Rechercher</button>
-        </div>
-    </nav>
+    <main class="w-full flex flex-col lg:flex-row">
 
-    <main class="w-full">
-        <ul class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4">
+        {% include "../components/sidebar.html" %}
+
+        <ul class="grid grid-cols-1 xl:grid-cols-2 gap-4">
             <li class="">
                 {% include "../components/card.html" %}
             </li>
