@@ -1,28 +1,28 @@
 <header class="w-full h-14 md:h-16 bg-white shadow-md">
     <div class="container px-4 lg:px-8 h-full w-full flex justify-between items-center">
-        <h6 class="text-gray-900 font-light text-2xl tracking-tight">Afterlife</h6>
+        <a href="{% url 'afterlifeIndex' %}" class="text-gray-900 font-light text-2xl tracking-tight">Afterlife</a>
         <nav class="h-full">
             <ul class="h-full flex space-x-4 md:space-x-8">
                 <li class="h-full">
-                    <a href="{% url 'afterlifeIndex' %}" class="flex relative items-center h-full">
-                        <span class="font-normal text-gray-900">Accueil</span>
-                        {% if active == "Accueil" %}
+                    <a href="{% url 'postsIndex' %}" class="flex relative items-center h-full">
+                        <span class="font-medium text-gray-800">Posts</span>
+                        {% if active == "posts" %}
                         <div class="absolute bottom-0 left-0 h-1 w-full bg-gray-900"></div>
                         {% endif %}
                     </a>
                 </li>
                 <li class="h-full">
-                    <a href="{% url 'blogIndex' %}" class="flex relative items-center h-full">
-                        <span class="font-normal text-gray-900">Blog</span>
-                        {% if active == "Blog" %}
+                    <a href="{% url 'storiesIndex' %}" class="flex relative items-center h-full">
+                        <span class="font-medium text-gray-800">Stories</span>
+                        {% if active == "stories" %}
                         <div class="absolute bottom-0 left-0 h-1 w-full bg-gray-900"></div>
                         {% endif %}
                     </a>
                 </li>
                 <li class="h-full">
-                    <a href="{% url 'notebookIndex' %}" class="flex relative items-center h-full">
-                        <span class="font-normal text-gray-900">Carnet</span>
-                        {% if active == "Carnet" %}
+                    <a href="{% url 'notesIndex' %}" class="flex relative items-center h-full">
+                        <span class="font-medium text-gray-800">Notes</span>
+                        {% if active == "notes" %}
                         <div class="absolute bottom-0 left-0 h-1 w-full bg-gray-900"></div>
                         {% endif %}
                     </a>
