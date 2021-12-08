@@ -1,0 +1,79 @@
+{% extends "layouts/base.html" %}
+
+{% block page_name %}Blog - Etiquettes{% endblock %}
+
+{% block content %}
+
+{% include "../components/header.html" with active="posts" %}
+
+{% include "../components/hero.html" with title="Blog" subtitle="les étiquettes" %}
+
+<div class=" container px-4 xl:px-8">
+
+    <main class="w-full flex flex-col lg:flex-row">
+
+        {% include "../components/sidebar.html" %}
+
+        <ul class="w-full grid grid-cols-1 gap-4 auto-rows-min sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+            <li class="bg-white rounded shadow flex flex-row">
+                <div class="relative bg-red-500 h-full w-16 rounded-l flex-shrink-0">
+                    <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-medium uppercase text-white tracking-wider">L</span>
+                </div>
+                <div class="p-4 w-full">
+                    <h2 class="font-medium">Linux</h2>
+                    <p class="text-gray-500 text-sm">15 articles</p>
+                </div>
+            </li>
+            <li class="bg-white rounded shadow flex flex-row">
+                <div class="relative bg-blue-500 h-full w-16 rounded-l flex-shrink-0">
+                    <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-medium uppercase text-white tracking-wider">W</span>
+                </div>
+                <div class="p-4 w-full">
+                    <h2 class="font-medium">Windows</h2>
+                    <p class="text-gray-500 text-sm">15 articles</p>
+                </div>
+            </li>
+            <li class="bg-white rounded shadow flex flex-row">
+                <div class="relative bg-gray-500 h-full w-16 rounded-l flex-shrink-0">
+                    <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-medium uppercase text-white tracking-wider">MO</span>
+                </div>
+                <div class="p-4 w-full">
+                    <h2 class="font-medium">Mac OS</h2>
+                    <p class="text-gray-500 text-sm">15 articles</p>
+                </div>
+            </li>
+            <li class="bg-white rounded shadow flex flex-row">
+                <div class="relative bg-purple-500 h-full w-16 rounded-l flex-shrink-0">
+                    <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-medium uppercase text-white tracking-wider">W</span>
+                </div>
+                <div class="p-4 w-full">
+                    <h2 class="font-medium">Webpack</h2>
+                    <p class="text-gray-500 text-sm">15 articles</p>
+                </div>
+            </li>
+            <li class="bg-white rounded shadow flex flex-row">
+                <div class="relative bg-yellow-500 h-full w-16 rounded-l flex-shrink-0">
+                    <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-medium uppercase text-white tracking-wider">NJ</span>
+                </div>
+                <div class="p-4 w-full">
+                    <h2 class="font-medium">Node JS</h2>
+                    <p class="text-gray-500 text-sm">15 articles</p>
+                </div>
+            </li>
+            <li class="bg-white rounded shadow flex flex-row">
+                <div class="relative bg-red-500 h-full w-16 rounded-l flex-shrink-0">
+                    <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-medium uppercase text-white tracking-wider">R</span>
+                </div>
+                <div class="p-4 w-full">
+                    <h2 class="font-medium">Ruby</h2>
+                    <p class="text-gray-500 text-sm">15 articles</p>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+</div>
+
+{% include "../components/footer.html" %}
+
+{% endblock %}
