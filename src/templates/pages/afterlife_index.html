@@ -1,31 +1,12 @@
 {% extends "layouts/base.html" %}
 
-{% block page_name %}Accueil{% endblock %}
+{% block page_name %}Home{% endblock %}
 
 {% block content %}
 
-<div class="min-h-screen flex flex-col justify-between">
-
-{% include "../components/header.html" with active="Accueil" %}
-
-<main class="container h-full px-4 xl:px-8 flex flex-col xl:flex-row lg:items-center">
-    <section class="w-full xl:w-1/2 pl-2 pr-4 pt-4 xl:pt-0">
-        <div class="flex items-center justify-center">
-            <div class="text-center">
-                <h1 class="text-7xl md:text-9xl font-bold text-gray-900 mb-2">Afterlife</h1>
-                <p class="text-xl text-gray-600 font-normal mb-8">Que puis-je vous apprendre aujourd'hui ?</p>
-                <div class="flex items-center flex-col space-y-4 sm:space-y-0 sm:flex-row sm:items-start sm:justify-center sm:space-x-8 mb-4">
-                    <a href="{% url 'blogIndex' %}" class="rounded bg-purple-500 text-white font-normal shadow px-8 py-2">Voir mon blog</a>
-                    <a href="{% url 'notebookIndex' %}" class="rounded bg-white font-normal shadow px-8 py-2">Voir mon carnet de notes</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    {% include "../components/timeline.html" %}
+<main class="container h-full px-4 xl:px-8 flex flex-row justify-between items-center">
+    {% include "../components/cta.html" %}
+    {% include "../components/feed.html" %}
 </main>
-
-{% include "../components/footer.html" %}
-
-</div>
 
 {% endblock %}
