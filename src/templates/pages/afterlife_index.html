@@ -1,12 +1,10 @@
 {% extends "layouts/base.html" %}
 
-{% block page_name %}Home{% endblock %}
+{% block page_title %}Home{% endblock %}
 
-{% block content %}
+{% block main %}
 
-<main class="container h-full px-4 xl:px-8 flex flex-row justify-between items-center">
-    {% include "../components/cta.html" %}
-    {% include "../components/feed.html" %}
-</main>
+{% include "../components/cta.html" %}
+{% include "../components/feed.html" %}
 
 {% endblock %}
