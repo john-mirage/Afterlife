@@ -1,17 +1,15 @@
-<section class="container px-8 py-32">
+<section class="pt-16 pb-32">
 
     <h1 class="text-9xl font-bold text-gray-800 text-center pb-4">Afterlife</h1>
-    <p class="text-xl text-gray-500 font-normal text-center pb-8">A short description explaining the purpose of the website</p>
+    <p class="text-xl text-gray-500 font-normal text-center pb-16">A short description explaining the purpose of the website</p>
     <nav>
-        <ul class="flex flex-row justify-center space-x-4">
+        <ul class="grid grid-cols-3 gap-4">
             <li>
                 {% include "../components/cta_card.html" with type="post" %}
             </li>
-
             <li>
                 {% include "../components/cta_card.html" with type="story" %}
             </li>
-
             <li>
                 {% include "../components/cta_card.html" with type="note" %}
             </li>
