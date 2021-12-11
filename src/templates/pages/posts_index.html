@@ -2,15 +2,12 @@
 
 {% block page_title %}Posts{% endblock %}
 
-{% block sidebar %}
+{% block searchBar %}
 
-{% include "../components/separator.html" %}
-
-<section class="px-6 pb-2 space-y-4">
-    <h3 class="text-gray-800 font-medium text-base">On this page</h3>
-    {% include "../components/search.html" %}
-    {% include "../components/filter.html" %}
-    {% include "../components/tags.html" %}
+<section class="fixed top-14 md:top-16 left-0 z-20 w-full h-14 md:h-16 bg-white shadow">
+    <div class="container container-padding flex h-full">
+        {% include "../components/search.html" %}
+    </div>
 </section>
 
 {% endblock %}
@@ -18,6 +15,8 @@
 {% block article %}
 
 {% include "../components/hero.html" %}
+
+{% include "../components/filter.html" %}
 
 <div class="space-y-4">
 
