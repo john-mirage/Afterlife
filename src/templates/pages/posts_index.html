@@ -4,6 +4,8 @@
 
 {% block sidebar %}
 
+{% include "../components/separator.html" %}
+
 <section class="px-6 pb-2 space-y-4">
     <h3 class="text-gray-800 font-medium text-base">On this page</h3>
     {% include "../components/search.html" %}
@@ -15,11 +17,50 @@
 
 {% block article %}
 
+{% include "../components/hero.html" %}
+
 <div class="space-y-4">
-    <div class="bg-white rounded shadow p-4">{% lorem 10 w %}</div>
-    <div class="bg-white rounded shadow p-4">{% lorem 10 w %}</div>
-    <div class="bg-white rounded shadow p-4">{% lorem 10 w %}</div>
-    <div class="bg-white rounded shadow p-4">{% lorem 10 w %}</div>
+
+    <article class="bg-white rounded shadow p-4">
+        <h4 class="text-gray-800 font-medium text-lg pb-2">Title of the post</h4>
+        <p class="text-gray-500 text-base pb-3">{% lorem 25 w %}</p>
+        <div class="flex flex-wrap flex-row -mb-2">
+            <a class="rounded bg-blue-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Linux</a>
+            <a class="rounded bg-green-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Windows</a>
+            <a class="rounded bg-yellow-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">MacOS</a>
+        </div>
+    </article>
+
+    <article class="bg-white rounded shadow p-4">
+        <h4 class="text-gray-800 font-medium text-lg pb-2">Title of the post</h4>
+        <p class="text-gray-500 text-base pb-3">{% lorem 25 w %}</p>
+        <div class="flex flex-wrap flex-row -mb-2">
+            <a class="rounded bg-blue-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Linux</a>
+            <a class="rounded bg-green-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Windows</a>
+            <a class="rounded bg-yellow-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">MacOS</a>
+        </div>
+    </article>
+
+    <article class="bg-white rounded shadow p-4">
+        <h4 class="text-gray-800 font-medium text-lg pb-2">Title of the post</h4>
+        <p class="text-gray-500 text-base pb-3">{% lorem 25 w %}</p>
+        <div class="flex flex-wrap flex-row -mb-2">
+            <a class="rounded bg-blue-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Linux</a>
+            <a class="rounded bg-green-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Windows</a>
+            <a class="rounded bg-yellow-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">MacOS</a>
+        </div>
+    </article>
+
+    <article class="bg-white rounded shadow p-4">
+        <h4 class="text-gray-800 font-medium text-lg pb-2">Title of the post</h4>
+        <p class="text-gray-500 text-base pb-3">{% lorem 25 w %}</p>
+        <div class="flex flex-wrap flex-row -mb-2">
+            <a class="rounded bg-blue-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Linux</a>
+            <a class="rounded bg-green-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Windows</a>
+            <a class="rounded bg-yellow-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">MacOS</a>
+        </div>
+    </article>
+
 </div>
 
 {% endblock %}
