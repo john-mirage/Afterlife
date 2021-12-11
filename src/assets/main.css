@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#navigation-trigger:checked ~ #navigation {
+    left: 0;
+}
+
+#navigation-trigger:checked ~ #navigation-overlay {
+    display: block;
+}
