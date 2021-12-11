@@ -19,11 +19,6 @@ module.exports = {
     container: {
       center: true,
     },
-    extend: {
-      spacing: {
-        container: '760px',
-      },
-    },
   },
   variants: {
     extend: {},
