@@ -6,6 +6,10 @@ module.exports = {
   ],
   darkMode: 'media',
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+    },
     fontFamily: {
       sans: [
         "'Inter'",
