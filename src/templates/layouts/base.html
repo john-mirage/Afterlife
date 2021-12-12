@@ -8,108 +8,108 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Afterlife is a blog focused on development and linux">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'main.css' %}">
         {% filter truncatechars_html:55 %}
         <title>Afterlife - {% block page_title %}{% endblock %}</title>
         {% endfilter %}
     </head>
 
-    <body class="bg-gray-100">
+    <body class="page">
 
-        <!-- Sidebar trigger -->
-        <input class="hidden" type="checkbox" id="navigation-trigger" name="navigation-trigger">
+        <!-- Trigger -->
+        <input class="trigger" type="checkbox" id="sidebar-trigger" name="sidebar-trigger">
 
         <!-- Header -->
-        <header class="fixed z-50 top-0 left-0 w-full h-14 md:h-16 container-padding flex flex-row items-center bg-white shadow-md">
-            <div class="flex-1 flex flex-row justify-start items-center">
-                <label class="h-10 w-10 flex rounded-full cursor-pointer -ml-2.5 md:hidden hover:bg-gray-200" for="navigation-trigger">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="m-auto h-5 w-5 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <header class="page__header header">
+
+            <div class="header__section header__section--left">
+                <label class="button button--left" for="sidebar-trigger">
+                    <svg class="button__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </label>
-                <a class="text-xl font-medium text-gray-800 pl-1 md:pl-0" href="{% url 'afterlifeIndex' %}">Afterlife</a>
+                <a class="header__brand" href="{% url 'afterlifeIndex' %}">Afterlife</a>
             </div>
-            <nav class="h-full flex flex-row items-center">
-                <ul class="hidden h-full md:flex md:flex-row md:space-x-8">
-                    <li class="h-full">
-                        <a class="relative h-full flex" href="{% url 'postsIndex' %}">
-                            <span class="m-auto">Posts</span>
-                            <div class="absolute bottom-0 left-0 w-full h-1 bg-gray-800"></div>
-                        </a>
-                    </li>
-                    <li class="h-full">
-                        <a class="h-full flex" href="{% url 'storiesIndex' %}">
-                            <span class="m-auto">Stories</span>
-                        </a>
-                    </li>
-                    <li class="h-full">
-                        <a class="h-full flex" href="{% url 'notesIndex' %}">
-                            <span class="m-auto">Notes</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="flex-1 flex flex-row justify-end">
-                <a class="h-10 w-10 flex -mr-2 md:h-12 md:w-12 md:-mr-3 rounded-full hover:bg-gray-200" href="https://github.com/ChaosDynamix/Afterlife">
-                    <svg class="m-auto h-6 w-6" viewBox="0 0 128 128">
+
+            <div class="header__section header__section--center">
+                <nav class="header__navigation">
+                    <ul class="tabs">
+                        <li class="tabs__item">
+                            <a class="tabs__link" href="{% url 'postsIndex' %}">
+                                <span class="tabs__text tabs__text--active">Posts</span>
+                                <div class="tabs__line"></div>
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__link" href="{% url 'storiesIndex' %}">
+                                <span class="tabs__text">Stories</span>
+                            </a>
+                        </li>
+                        <li class="tabs__item">
+                            <a class="tabs__link" href="{% url 'notesIndex' %}">
+                                <span class="tabs__text">Notes</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header__section header__section--right">
+                <a class="button button--right" href="https://github.com/ChaosDynamix/Afterlife">
+                    <svg class="button__icon" viewBox="0 0 128 128">
                         <g fill="#1e293b"><path fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"></path><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"></path></g>
                     </svg>
                 </a>
             </div>
+
         </header>
 
+        <!--
         {% block searchBar %}{% endblock %}
+        -->
 
         <!-- Main -->
-        <main class="py-14 md:py-16">
-            <article class="container container-padding">
+        <main class="page__body">
+            <article class="container">
+                <!--
                 {% block article %}{% endblock %}
+                -->
             </article>
         </main>
 
         <!-- Sidebar -->
-        <aside class="fixed z-40 top-0 -left-80 pt-16 pb-4 transition-all duration-300 min-h-screen bg-white shadow w-64 md:w-80" id="navigation">
-            <h3 class="px-4 pt-4 pb-4 text-gray-800 font-medium text-base">Navigation</h3>
-            <nav>
-                <ul>
-                    <li>
-                        <a class="flex flex-row items-center px-4 py-2 w-full hover:bg-gray-100" href="{% url 'postsIndex' %}">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                            <span class="pl-3 text-sm font-normal text-gray-800">Posts</span>
+        <aside class="page__sidebar sidebar" id="navigation">
+            <h3 class="sidebar__title">Navigation</h3>
+
+            <nav class="sidebar__navigation">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="{% url 'postsIndex' %}">
+                            <span class="menu__text">Posts</span>
                         </a>
                     </li>
-                    <li>
-                        <a class="flex flex-row items-center px-4 py-2 w-full hover:bg-gray-100" href="{% url 'storiesIndex' %}">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                            </svg>
-                            <span class="pl-3 text-sm font-normal text-gray-800">Stories</span>
+                    <li class="menu__item">
+                        <a class="menu__link" href="{% url 'storiesIndex' %}">
+                            <span class="menu__text">Stories</span>
                         </a>
                     </li>
-                    <li>
-                        <a class="flex flex-row items-center px-4 py-2 w-full hover:bg-gray-100" href="{% url 'notesIndex' %}">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                            </svg>
-                            <span class="pl-3 text-sm font-normal text-gray-800">Notes</span>
+                    <li class="menu__item">
+                        <a class="menu__link" href="{% url 'notesIndex' %}">
+                            <span class="menu__text">Notes</span>
                         </a>
                     </li>
                 </ul>
             </nav>
+
         </aside>
 
-        <!-- Sidebar overlay -->
-        <label class="hidden fixed z-30 top-0 left-0 w-screen h-screen bg-black opacity-50 cursor-pointer" for="navigation-trigger" id="navigation-overlay"></label>
+        <!-- Overlay -->
+        <label class="overlay" for="sidebar-trigger" id="sidebar-overlay"></label>
 
         <!-- Footer -->
-        <footer class="container container-padding pb-6">
-            <div class="pt-6 border-gray-300 border-solid border-t"></div>
-            <p class="text-sm text-gray-500 text-center">&copy; 2021 - Afterlife</p>
+        <footer class="page__footer container">
+            <div class="separator"></div>
+            <p>&copy; 2021 - Afterlife</p>
         </footer>
 
     </body>
