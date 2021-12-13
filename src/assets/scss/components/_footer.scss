@@ -1,0 +1,16 @@
+@use '../abstracts/variables';
+
+.footer {
+    
+    &__separator {
+        width: 100%;
+        height: 0.1rem;
+        background-color: variables.$color-background-separator;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        padding: 2.4rem 0;
+        color: variables.$color-text-secondary;
+    }
+}
