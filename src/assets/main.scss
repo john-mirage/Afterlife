@@ -5,10 +5,12 @@
 // Components
 @use 'scss/components/page';
 @use 'scss/components/sidebar';
-@use 'scss/components/button';
-@use 'scss/components/button-group';
+@use 'scss/components/icon-list';
 @use 'scss/components/header';
-@use 'scss/components/tabs';
+@use 'scss/components/tab-list';
 @use 'scss/components/menu';
 @use 'scss/components/container';
 @use 'scss/components/footer';
+@use 'scss/components/cta';
+@use 'scss/components/backdrop';
+@use 'scss/components/separator';

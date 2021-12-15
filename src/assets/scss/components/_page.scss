@@ -10,8 +10,13 @@
         z-index: 90;
     }
 
-    &__body {
-        padding-top: 6.4rem;
+    &__backdrop {
+        position: fixed;
+        top: 6.4rem;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 6.4rem);
+        z-index: 60;
     }
 
     &__sidebar {
@@ -50,4 +55,8 @@
 
 .page__sidebar-trigger:checked ~ .page__sidebar-overlay {
     display: block;
+}
+
+.page__backdrop-trigger:checked ~ .page__backdrop {
+    top: calc(100vh - 4.8rem);
 }

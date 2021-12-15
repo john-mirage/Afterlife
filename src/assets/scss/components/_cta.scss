@@ -1,0 +1,22 @@
+@use '../abstracts/variables';
+
+.cta {
+    padding-top: 6.4rem;
+    padding-bottom: 12.8rem;
+
+    &__title {
+        font-size: 12.8rem;
+        font-weight: 700;
+        color: variables.$color-text-primary;
+        text-align: center;
+        padding-bottom: 1.6rem;
+    }
+
+    &__subtitle {
+        font-size: 2rem;
+        font-weight: 500;
+        color: variables.$color-text-secondary;
+        text-align: center;
+        padding-bottom: 6.4rem;
+    }
+}

@@ -8,11 +8,7 @@
 
 html {
     font-size: 10px;
-    font-family: 'Inter', sans-serif;
-
-    @supports (font-variation-settings: normal) {
-        font-family: 'Inter var', sans-serif;
-    }
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -43,4 +39,9 @@ a {
     text-decoration: inherit;
     color: inherit;
     cursor: pointer;
+}
+
+label,
+span {
+    display: block;
 }
