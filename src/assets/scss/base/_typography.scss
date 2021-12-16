@@ -7,3 +7,116 @@ h6,
 p {
     margin: 0;
 }
+
+.text-display-lg {
+    line-height: 6.4rem;
+    font-size: 5.7rem;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.text-display-md {
+    line-height: 5.2rem;
+    font-size: 4.5rem;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.text-display-sm {
+    line-height: 4.4rem;
+    font-size: 3.6rem;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.text-headline-lg {
+    line-height: 4rem;
+    font-size: 3.2rem;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.text-headline-md {
+    line-height: 3.6rem;
+    font-size: 2.8rem;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.text-headline-sm {
+    line-height: 3.2rem;
+    font-size: 2.4rem;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.text-title-lg {
+    line-height: 2.8rem;
+    font-size: 2.2rem;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.text-title-md {
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.015rem;
+    font-weight: 500;
+}
+
+.text-title-sm {
+    line-height: 2rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.01rem;
+    font-weight: 500;
+}
+
+.text-label-lg {
+    line-height: 2rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.01rem;
+    font-weight: 500;
+}
+
+.text-label-md {
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+}
+
+.text-label-sm {
+    line-height: 1.6rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+}
+
+.text-body-lg {
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.015rem;
+    font-weight: 400;
+}
+
+.text-body-md {
+    line-height: 2rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.025rem;
+    font-weight: 400;
+}
+
+.text-body-sm {
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.04rem;
+    font-weight: 400;
+}
+
+.text-primary {
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.text-secondary {
+    color: rgba(0, 0, 0, 0.60);
+}

@@ -3,12 +3,22 @@
 @use 'scss/base/typography';
 
 // Components
-@use 'scss/components/page';
-@use 'scss/components/sidebar';
+@use 'scss/components/card-list';
+@use 'scss/components/card';
+
 @use 'scss/components/icon-list';
-@use 'scss/components/header';
+@use 'scss/components/icon';
+
 @use 'scss/components/tab-list';
-@use 'scss/components/menu';
+@use 'scss/components/tab';
+
+@use 'scss/components/tag-list';
+@use 'scss/components/tag';
+
+@use 'scss/components/page';
+@use 'scss/components/header';
+@use 'scss/components/list';
+@use 'scss/components/sidebar';
 @use 'scss/components/container';
 @use 'scss/components/footer';
 @use 'scss/components/cta';

@@ -1,5 +1,3 @@
-@import url('https://rsms.me/inter/inter.css');
-
 *,
 ::before,
 ::after {
@@ -44,4 +42,9 @@ a {
 label,
 span {
     display: block;
+}
+
+button {
+    background-color: transparent;
+    border: none;
 }

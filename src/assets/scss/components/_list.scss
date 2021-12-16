@@ -1,0 +1,33 @@
+.list {
+    width: 100%;
+}
+
+.list-item {
+    height: 4.0rem;
+    width: 100%;
+    
+    &__link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        border-radius: 0.4rem;
+
+        &:hover {
+            background-color: #f3f4f6;
+        }
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        padding-left: 1.2rem;
+    }
+}
