@@ -1,61 +1,84 @@
 {% extends "layouts/base.html" %}
 
 {% block page_title %}Posts{% endblock %}
-
-{% block searchBar %}
-
-<section class="fixed top-14 md:top-16 left-0 z-20 w-full h-14 md:h-16 bg-white shadow">
-    <div class="container container-padding flex h-full">
-        {% include "../components/search.html" %}
-    </div>
-</section>
-
-{% endblock %}
+{% block backdrop_title %}Latest posts{% endblock %}
 
 {% block article %}
 
-<div class="space-y-4">
+<ul class="card-list">
 
-    <article class="bg-white rounded shadow p-4">
-        <h4 class="text-gray-800 font-medium text-lg pb-2">Title of the post</h4>
-        <p class="text-gray-500 text-base pb-3">{% lorem 25 w %}</p>
-        <div class="flex flex-wrap flex-row -mb-2">
-            <a class="rounded bg-blue-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Linux</a>
-            <a class="rounded bg-green-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Windows</a>
-            <a class="rounded bg-yellow-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">MacOS</a>
-        </div>
-    </article>
+    <li class="card-list__item">
+        <article class="card">
+            <h4 class="text-title-md text-primary card__title">Title of the post</h4>
+            <p class="text-body-md text-secondary card__description">{% lorem 25 w %}</p>
+            <ul class="tag-list">
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">Linux</a>
+                </li>
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">Windows</a>
+                </li>
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">MacOS</a>
+                </li>
+            </ul>
+        </article>
+    </li>
 
-    <article class="bg-white rounded shadow p-4">
-        <h4 class="text-gray-800 font-medium text-lg pb-2">Title of the post</h4>
-        <p class="text-gray-500 text-base pb-3">{% lorem 25 w %}</p>
-        <div class="flex flex-wrap flex-row -mb-2">
-            <a class="rounded bg-blue-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Linux</a>
-            <a class="rounded bg-green-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Windows</a>
-            <a class="rounded bg-yellow-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">MacOS</a>
-        </div>
-    </article>
+    <li class="card-list__item">
+        <article class="card">
+            <h4 class="text-title-md text-primary card__title">Title of the post</h4>
+            <p class="text-body-md text-secondary card__description">{% lorem 25 w %}</p>
+            <ul class="tag-list">
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">Linux</a>
+                </li>
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">Windows</a>
+                </li>
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">MacOS</a>
+                </li>
+            </ul>
+        </article>
+    </li>
 
-    <article class="bg-white rounded shadow p-4">
-        <h4 class="text-gray-800 font-medium text-lg pb-2">Title of the post</h4>
-        <p class="text-gray-500 text-base pb-3">{% lorem 25 w %}</p>
-        <div class="flex flex-wrap flex-row -mb-2">
-            <a class="rounded bg-blue-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Linux</a>
-            <a class="rounded bg-green-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Windows</a>
-            <a class="rounded bg-yellow-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">MacOS</a>
-        </div>
-    </article>
+    <li class="card-list__item">
+        <article class="card">
+            <h4 class="text-title-md text-primary card__title">Title of the post</h4>
+            <p class="text-body-md text-secondary card__description">{% lorem 25 w %}</p>
+            <ul class="tag-list">
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">Linux</a>
+                </li>
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">Windows</a>
+                </li>
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">MacOS</a>
+                </li>
+            </ul>
+        </article>
+    </li>
 
-    <article class="bg-white rounded shadow p-4">
-        <h4 class="text-gray-800 font-medium text-lg pb-2">Title of the post</h4>
-        <p class="text-gray-500 text-base pb-3">{% lorem 25 w %}</p>
-        <div class="flex flex-wrap flex-row -mb-2">
-            <a class="rounded bg-blue-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Linux</a>
-            <a class="rounded bg-green-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">Windows</a>
-            <a class="rounded bg-yellow-200 py-1 px-2 text-xs font-medium text-gray-700 mr-2 mb-2" href="#">MacOS</a>
-        </div>
-    </article>
-
-</div>
+    <li class="card-list__item">
+        <article class="card">
+            <h4 class="text-title-md text-primary card__title">Title of the post</h4>
+            <p class="text-body-md text-secondary card__description">{% lorem 25 w %}</p>
+            <ul class="tag-list">
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">Linux</a>
+                </li>
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">Windows</a>
+                </li>
+                <li class="tag-list__item">
+                    <a class="text-label-lg tag" href="#">MacOS</a>
+                </li>
+            </ul>
+        </article>
+    </li>
+    
+</ul>
 
 {% endblock %}
