@@ -54,13 +54,43 @@
 
 </section>
 
-<!--
 <section class="feed">
     <h2 class="feed__title">Feed</h2>
 
     <ul class="event-list">
 
-        <li class="event-list-item">
+        <li class="event-list__item">
+
+            <article class="event">
+
+                <div class="event__header">
+
+                </div>
+
+                <div class="event__body">
+
+                    <article class="card">
+                        <h4 class="text-title-md text-primary card__title">Title of the post</h4>
+                        <p class="text-body-md text-secondary card__description">{% lorem 25 w %}</p>
+    
+                        <ul class="tag-list">
+                            <li class="tag-list__item">
+                                <a class="text-label-lg tag" href="#">Linux</a>
+                            </li>
+                            <li class="tag-list__item">
+                                <a class="text-label-lg tag" href="#">Windows</a>
+                            </li>
+                            <li class="tag-list__item">
+                                <a class="text-label-lg tag" href="#">MacOS</a>
+                            </li>
+                        </ul>
+    
+                    </article>
+
+                </div>
+
+            </article>
+
             <div class="event-list-item__header">
                 <div class="event-list-item__icon-wrapper">
                     <svg class="event-list-item__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -78,22 +108,22 @@
             <div class="event-list-item__body">
                 <div class="event-list-item__line"></div>
 
-                <article class="event-card">
-                    <h4 class="event-card__title">Title of the post</h4>
-                    <p class="event-card__description">{% lorem 25 w %}</p>
+                <article class="card">
+                    <h4 class="text-title-md text-primary card__title">Title of the post</h4>
+                    <p class="text-body-md text-secondary card__description">{% lorem 25 w %}</p>
 
                     <ul class="tag-list">
-                        <li class="tag-list-item">
-                            <a class="tag-list-item__text" href="#">Linux</a>
+                        <li class="tag-list__item">
+                            <a class="text-label-lg tag" href="#">Linux</a>
                         </li>
-                        <li class="tag-list-item">
-                            <a class="tag-list-item__text" href="#">Windows</a>
+                        <li class="tag-list__item">
+                            <a class="text-label-lg tag" href="#">Windows</a>
                         </li>
-                        <li class="tag-list-item">
-                            <a class="tag-list-item__text" href="#">MacOS</a>
+                        <li class="tag-list__item">
+                            <a class="text-label-lg tag" href="#">MacOS</a>
                         </li>
                     </ul>
-                   
+
                 </article>
 
             </div>
@@ -158,6 +188,5 @@
 
     </ul>
 </section>
--->
 
 {% endblock %}
