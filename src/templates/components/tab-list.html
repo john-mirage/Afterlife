@@ -1,0 +1,31 @@
+<nav class="tab-list tab-list--{{ direction }}">
+
+    <a class="tab-list__item" href="{% url 'afterlifeIndex' %}">
+        <div class="tab-list__icon-container {% if active_tab == 'home' %}tab-list__icon-container--active{% endif %}">
+            <span class="tab-list__icon {% if active_tab == 'home' %}material-icons{% else %}material-icons-outlined{% endif %}">home</span>
+        </div>
+        <span class="text-label-md tab-list__label">Home</span>
+    </a>
+
+    <a class="tab-list__item" href="{% url 'postsIndex' %}">
+        <div class="tab-list__icon-container {% if active_tab == 'posts' %}tab-list__icon-container--active{% endif %}">
+            <span class="tab-list__icon {% if active_tab == 'posts' %}material-icons{% else %}material-icons-outlined{% endif %}">article</span>
+        </div>
+        <span class="text-label-md tab-list__label">Posts</span>
+    </a>
+
+    <a class="tab-list__item" href="{% url 'storiesIndex' %}">
+        <div class="tab-list__icon-container {% if active_tab == 'stories' %}tab-list__icon-container--active{% endif %}">
+            <span class="tab-list__icon {% if active_tab == 'stories' %}material-icons{% else %}material-icons-outlined{% endif %}">book</span>
+        </div>
+        <span class="text-label-md tab-list__label">Stories</span>
+    </a>
+
+    <a class="tab-list__item" href="{% url 'notesIndex' %}">
+        <div class="tab-list__icon-container {% if active_tab == 'notes' %}tab-list__icon-container--active{% endif %}">
+            <span class="tab-list__icon {% if active_tab == 'notes' %}material-icons{% else %}material-icons-outlined{% endif %}">note</span>
+        </div>
+        <span class="text-label-md tab-list__label">Notes</span>
+    </a>
+
+</nav>
