@@ -1,38 +1,69 @@
-@use '../abstracts/variables';
-
 .tab-list {
     display: flex;
-    flex-direction: row;
     height: 100%;
-}
 
-.tab-list-item {
-    flex: 1 1 0%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1.2rem;
-    padding-bottom: 1.6rem;
-    margin: 0 0.4rem;
+    &--row {
+        flex-direction: row;
 
-    &:hover {
-        background-color: #e9d5ff;
+        .tab-list__item {
+            flex: 1 1 0%;
+            margin: 0 0.4rem;
+            padding-top: 1.2rem;
+            padding-bottom: 1.6rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .tab-list__icon-container {
+            width: 6.4rem;
+            animation-name: bottomIconContainerSpread;
+        }
     }
 
-    &:first-child {
-        margin-left: 0;
+    &--column {
+        flex-direction: column;
+        justify-content: center;
+
+        .tab-list__item {
+            flex: 0 0 5.6rem;
+            margin: 0.6rem 0;
+            padding-bottom: 0.4rem;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .tab-list__icon-container {
+            animation-name: leftIconContainerSpread;
+            width: 5.4rem;
+        }
     }
 
-    &:last-child {
-        margin-right: 0;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover {
+            background-color: #e9d5ff;
+        }
     }
 
     &__icon-container {
         position: relative;
-        width: 6.4rem;
         height: 3.2rem;
         margin-bottom: 0.4rem;
-        animation-name: iconContainerSpread;
         animation-duration: 300ms;
 
         &--active {
@@ -58,7 +89,16 @@
     }
 }
 
-@keyframes iconContainerSpread {
+@keyframes leftIconContainerSpread {
+    from {
+        width: 2.4rem;
+    }
+    to {
+        width: 5.4rem;
+    }
+}
+
+@keyframes bottomIconContainerSpread {
     from {
         width: 2.4rem;
     }

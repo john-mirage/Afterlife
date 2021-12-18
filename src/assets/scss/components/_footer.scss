@@ -1,11 +1,7 @@
-@use '../abstracts/variables';
-
 .footer {
 
     &__text {
-        font-size: 1.4rem;
         padding: 2.4rem 0;
-        color: variables.$color-text-secondary;
         text-align: center;
     }
 }

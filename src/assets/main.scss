@@ -3,25 +3,15 @@
 @use 'scss/base/typography';
 
 // Components
+@use 'scss/components/header';
+@use 'scss/components/page';
+@use 'scss/components/tab-list';
+@use 'scss/components/button';
+@use 'scss/components/container';
 @use 'scss/components/card-list';
 @use 'scss/components/card';
-
-@use 'scss/components/icon-list';
-@use 'scss/components/icon';
-
-@use 'scss/components/tab-list';
-@use 'scss/components/tab';
-
-@use 'scss/components/tag-list';
-@use 'scss/components/tag';
-
-@use 'scss/components/page';
-@use 'scss/components/header';
-@use 'scss/components/list';
-@use 'scss/components/side-nav';
-@use 'scss/components/bottom-nav';
-@use 'scss/components/container';
-@use 'scss/components/footer';
-@use 'scss/components/cta';
-@use 'scss/components/backdrop';
+@use 'scss/components/chip-list';
+@use 'scss/components/chip';
+@use 'scss/components/article';
 @use 'scss/components/separator';
+@use 'scss/components/footer';
