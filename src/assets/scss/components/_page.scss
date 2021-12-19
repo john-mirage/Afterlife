@@ -40,11 +40,10 @@
 
     &__main {
         padding-top: 6.4rem;
-        padding-bottom: 8rem;
+        height: 2000px;
 
         @media screen and (min-width: 599px) {
             padding-left: 8rem;
-            padding-bottom: 0;
         }
     }
 }
