@@ -17,6 +17,12 @@
         width: 100%;
         height: 8rem;
         background-color: #f3e8ff;
+        transition-property: bottom;
+        transition-duration: 300ms;
+
+        &--hidden {
+            bottom: -8rem;
+        }
 
         @media screen and (min-width: 599px) {
             display: none;
