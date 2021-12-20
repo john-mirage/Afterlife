@@ -21,92 +21,42 @@
 
     <body class="page">
 
-        <!-- Header -->
-        <header class="header page__header">
-            <div class="header__section">
-                <a class="text-title-lg" href="{% url 'afterlifeIndex' %}">Afterlife</a>
+        <!-- Top app bar -->
+        <header class="top-app-bar">
+            <div class="top-app-bar__section">
+                <a class="top-app-bar__title" href="{% url 'afterlifeIndex' %}">Afterlife</a>
             </div>
-            <div class="header__section">
+            <div class="top-app-bar__section">
                 <button class="button">
                     <span class="button__icon material-icons-outlined">dark_mode</span>
-                    <span class="text-label-lg button__label">Dark mode</span>
+                    <span class="button__label">Dark mode</span>
                 </button>
                 <a class="button button--left-margin" href="https://github.com/ChaosDynamix/Afterlife">
                     <span class="button__icon material-icons-outlined">code</span>
-                    <span class="text-label-lg button__label">Source code</span>
+                    <span class="button__label">Source code</span>
                 </a>
             </div>
         </header>
 
-        <!-- Left navigation -->
-        <aside class="page__left-navigation">
-            {% include "../components/tab-list.html" with direction="column" active=active_tab %}
+        <!-- Navigation rail-->
+        <aside class="navigation-rail">
+            {% include "../components/navigation-list.html" with direction="column" %}
         </aside>
 
-        <!-- Bottom navigation -->
-        <aside class="page__bottom-navigation">
-            {% include "../components/tab-list.html" with direction="row" active=active_tab %}
+        <!-- Navigation bar -->
+        <aside class="navigation-bar">
+            {% include "../components/navigation-list.html" with direction="row" %}
         </aside>
 
         <!-- Main -->
-        <main class="page__main">
-
-            <!-- Article -->
-            <article class="article container">
-
-                <h1 class="text-display-lg article__title">Latest posts</h1>
-
-                <ul class="card-list">
-                    <li class="card-list__item">
-
-                        <article class="card">
-                            <h3 class="text-title-md card__title">Title of the card</h3>
-                            <p class="text-body-md card__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis porro in magnam saepe consequatur distinctio quas illum, voluptas perferendis ipsam labore id, molestias, natus facere rerum? Ipsa soluta ad dolores.</p>
-                            <ul class="chip-list">
-                                <li class="chip-list__item">
-                                    <a class="text-label-lg chip" href="">Windows</a>
-                                </li>
-                                <li class="chip-list__item">
-                                    <a class="text-label-lg chip" href="">Android</a>
-                                </li>
-                                <li class="chip-list__item">
-                                    <a class="text-label-lg chip" href="">Linux</a>
-                                </li>
-                            </ul>
-                        </article>
-
-                    </li>
-
-                    <li class="card-list__item">
-
-                        <article class="card">
-                            <h3 class="text-title-md card__title">Title of the card</h3>
-                            <p class="text-body-md card__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis porro in magnam saepe consequatur distinctio quas illum, voluptas perferendis ipsam labore id, molestias, natus facere rerum? Ipsa soluta ad dolores.</p>
-                            <ul class="chip-list">
-                                <li class="chip-list__item">
-                                    <a class="text-label-lg chip" href="">Windows</a>
-                                </li>
-                                <li class="chip-list__item">
-                                    <a class="text-label-lg chip" href="">Android</a>
-                                </li>
-                                <li class="chip-list__item">
-                                    <a class="text-label-lg chip" href="">Linux</a>
-                                </li>
-                            </ul>
-                        </article>
-
-                    </li>
-                </ul>
-
-            </article>
-
-            <!-- Footer -->
-            <footer class="footer container">
-                <div class="separator"></div>
-                <p class="text-body-md footer__text">&copy; 2021 - Afterlife</p>
-            </footer>
-
+        <main class="main page__main">
+            {% block article %}{% endblock %}
         </main>
+
+        <!-- Footer -->
+        <footer class="footer page__footer">
+            <p class="footer__text">&copy; 2021 - Afterlife</p>
+        </footer>
 
         <script defer src="{% static 'bundle.js' %}"></script>
     </body>

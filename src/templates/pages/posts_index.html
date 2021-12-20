@@ -5,80 +5,53 @@
 
 {% block article %}
 
-<ul class="card-list">
+<!-- Article -->
+<article class="article container">
 
-    <li class="card-list__item">
-        <article class="card">
-            <h4 class="text-title-md text-primary card__title">Title of the post</h4>
-            <p class="text-body-md text-secondary card__description">{% lorem 25 w %}</p>
-            <ul class="tag-list">
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">Linux</a>
-                </li>
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">Windows</a>
-                </li>
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">MacOS</a>
-                </li>
-            </ul>
-        </article>
-    </li>
+    <h1 class="article__title">Latest posts</h1>
 
-    <li class="card-list__item">
-        <article class="card">
-            <h4 class="text-title-md text-primary card__title">Title of the post</h4>
-            <p class="text-body-md text-secondary card__description">{% lorem 25 w %}</p>
-            <ul class="tag-list">
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">Linux</a>
-                </li>
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">Windows</a>
-                </li>
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">MacOS</a>
-                </li>
-            </ul>
-        </article>
-    </li>
+    <ul class="card-list">
+        <li class="card-list__item">
 
-    <li class="card-list__item">
-        <article class="card">
-            <h4 class="text-title-md text-primary card__title">Title of the post</h4>
-            <p class="text-body-md text-secondary card__description">{% lorem 25 w %}</p>
-            <ul class="tag-list">
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">Linux</a>
-                </li>
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">Windows</a>
-                </li>
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">MacOS</a>
-                </li>
-            </ul>
-        </article>
-    </li>
+            <article class="card">
+                <h3 class="card__title">Title of the card</h3>
+                <p class="card__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis porro in magnam saepe consequatur distinctio quas illum, voluptas perferendis ipsam labore id, molestias, natus facere rerum? Ipsa soluta ad dolores.</p>
+                <ul class="chip-list">
+                    <li class="chip-list__item">
+                        <a class="chip" href="">Windows</a>
+                    </li>
+                    <li class="chip-list__item">
+                        <a class="chip" href="">Android</a>
+                    </li>
+                    <li class="chip-list__item">
+                        <a class="chip" href="">Linux</a>
+                    </li>
+                </ul>
+            </article>
 
-    <li class="card-list__item">
-        <article class="card">
-            <h4 class="text-title-md text-primary card__title">Title of the post</h4>
-            <p class="text-body-md text-secondary card__description">{% lorem 25 w %}</p>
-            <ul class="tag-list">
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">Linux</a>
-                </li>
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">Windows</a>
-                </li>
-                <li class="tag-list__item">
-                    <a class="text-label-lg tag" href="#">MacOS</a>
-                </li>
-            </ul>
-        </article>
-    </li>
-    
-</ul>
+        </li>
+
+        <li class="card-list__item">
+
+            <article class="card">
+                <h3 class="card__title">Title of the card</h3>
+                <p class="card__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis porro in magnam saepe consequatur distinctio quas illum, voluptas perferendis ipsam labore id, molestias, natus facere rerum? Ipsa soluta ad dolores.</p>
+                <ul class="chip-list">
+                    <li class="chip-list__item">
+                        <a class="chip" href="">Windows</a>
+                    </li>
+                    <li class="chip-list__item">
+                        <a class="chip" href="">Android</a>
+                    </li>
+                    <li class="chip-list__item">
+                        <a class="chip" href="">Linux</a>
+                    </li>
+                </ul>
+            </article>
+
+        </li>
+    </ul>
+
+</article>
 
 {% endblock %}

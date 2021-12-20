@@ -1,0 +1,31 @@
+<nav class="navigation-list navigation-list--{{ direction }}">
+
+    <a class="navigation-list__item {% if active_navigation == 'home' %}navigation-list__item--active{% endif %}" href="{% url 'afterlifeIndex' %}">
+        <div class="navigation-list__icon-container">
+            <span class="navigation-list__icon {% if active_navigation == 'home' %}material-icons{% else %}material-icons-outlined{% endif %}">home</span>
+        </div>
+        <span class="text-label-md navigation-list__label">Home</span>
+    </a>
+
+    <a class="navigation-list__item {% if active_navigation == 'posts' %}navigation-list__item--active{% endif %}" href="{% url 'postsIndex' %}">
+        <div class="navigation-list__icon-container">
+            <span class="navigation-list__icon {% if active_navigation == 'posts' %}material-icons{% else %}material-icons-outlined{% endif %}">article</span>
+        </div>
+        <span class="text-label-md navigation-list__label">Posts</span>
+    </a>
+
+    <a class="navigation-list__item {% if active_navigation == 'stories' %}navigation-list__item--active{% endif %}" href="{% url 'storiesIndex' %}">
+        <div class="navigation-list__icon-container">
+            <span class="navigation-list__icon {% if active_navigation == 'stories' %}material-icons{% else %}material-icons-outlined{% endif %}">book</span>
+        </div>
+        <span class="text-label-md navigation-list__label">Stories</span>
+    </a>
+
+    <a class="navigation-list__item {% if active_navigation == 'notes' %}navigation-list__item--active{% endif %}" href="{% url 'notesIndex' %}">
+        <div class="navigation-list__icon-container">
+            <span class="navigation-list__icon {% if active_navigation == 'notes' %}material-icons{% else %}material-icons-outlined{% endif %}">note</span>
+        </div>
+        <span class="text-label-md navigation-list__label">Notes</span>
+    </a>
+
+</nav>
