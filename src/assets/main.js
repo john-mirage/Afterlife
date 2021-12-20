@@ -1,4 +1,6 @@
 import './main.scss';
-import { handleBottomNavigation } from './js/bottomNavigation';
+import { handleNavigationBar } from './js/navigation-bar';
+import { handleTopAppBar } from './js/top-app-bar';
 
-handleBottomNavigation();
+handleNavigationBar();
+handleTopAppBar();
