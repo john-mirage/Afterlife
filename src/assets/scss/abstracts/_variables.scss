@@ -1,8 +1,153 @@
-// Colors
+$palette-primary: (
+    "0": #000000,
+    "10": #21005D,
+    "20": #381E72,
+    "30": #4F378B,
+    "40": #6750A4,
+    "50": #7F67BE,
+    "60": #9A82DB,
+    "70": #B69DF8,
+    "80": #D0BCFF,
+    "90": #EADDFF,
+    "95": #F6EDFF,
+    "99": #FFFBFE,
+    "100": #FFFFFF 
+);
 
-$color-background: #6b21a8;
-$color-background-hover: #e2e8f0;
-$color-background-separator: #cbd5e1;
+$palette-secondary: (
+    "0": #000000,
+    "10": #1D192B,
+    "20": #332D41,
+    "30": #4A4458,
+    "40": #625B71,
+    "50": #7A7289,
+    "60": #958DA5,
+    "70": #B0A7C0,
+    "80": #CCC2DC,
+    "90": #E8DEF8,
+    "95": #F6EDFF,
+    "99": #FFFBFE,
+    "100": #FFFFFF
+);
 
-$color-text-primary: #f1f5f9;
-$color-text-secondary: #94a3b8;
+$palette-tertiary: (
+    "0": #000000,
+    "10": #31111D,
+    "20": #492532,
+    "30": #633B48,
+    "40": #7D5260,
+    "50": #986977,
+    "60": #B58392,
+    "70": #D29DAC,
+    "80": #EFB8C8,
+    "90": #FFD8E4,
+    "95": #FFECF1,
+    "99": #FFFBFA,
+    "100": #FFFFFF
+);
+
+$palette-error: (
+    "0": #000000,
+    "10": #410E0B,
+    "20": #601410,
+    "30": #8C1D18,
+    "40": #B3261E,
+    "50": #DC362E,
+    "60": #E46962,
+    "70": #EC928E,
+    "80": #F2B8B5,
+    "90": #F9DEDC,
+    "95": #FCEEEE,
+    "99": #FFFBF9,
+    "100": #FFFFFF
+);
+
+$palette-neutral: (
+    "0": #000000,
+    "10": #1C1B1F,
+    "20": #313033,
+    "30": #484649,
+    "40": #605D62,
+    "50": #787579,
+    "60": #939094,
+    "70": #AEAAAE,
+    "80": #C9C5CA,
+    "90": #E6E1E5,
+    "95": #F4EFF4,
+    "99": #FFFBFE,
+    "100": #FFFFFF
+);
+
+$palette-neutral-variant: (
+    "0": #000000,
+    "10": #1D1A22,
+    "20": #322F37,
+    "30": #49454F,
+    "40": #605D66,
+    "50": #79747E,
+    "60": #938F99,
+    "70": #AEA9B4,
+    "80": #CAC4D0,
+    "90": #E7E0EC,
+    "95": #F5EEFA,
+    "99": #FFFBFE,
+    "100": #FFFFFF
+);
+
+$light-primary: map.get($palette-primary, "40");
+$light-on-primary: map.get($palette-primary, "100");
+$light-primary-container: map.get($palette-primary, "90");
+$light-primary-on-container: map.get($palette-primary, "10");
+
+$light-secondary: map.get($palette-secondary, "40");
+$light-on-secondary: map.get($palette-secondary, "100");
+$light-secondary-container: map.get($palette-secondary, "90");
+$light-secondary-on-container: map.get($palette-secondary, "10");
+
+$light-tertiary: map.get($palette-tertiary, "40");
+$light-on-tertiary: map.get($palette-tertiary, "100");
+$light-tertiary-container: map.get($palette-tertiary, "90");
+$light-tertiary-on-container: map.get($palette-tertiary, "10");
+
+$light-error: map.get($palette-error, "40");
+$light-on-error: map.get($palette-error, "100");
+$light-error-container: map.get($palette-error, "90");
+$light-error-on-container: map.get($palette-error, "10");
+
+$light-background: map.get($palette-neutral, "99");
+$light-on-background: map.get($palette-neutral, "10");
+$light-surface: map.get($palette-neutral, "99");
+$light-on-surface: map.get($palette-neutral, "10");
+
+$light-surface-variant: map.get($palette-neutral-variant, "90");
+$light-on-surface-variant: map.get($palette-neutral-variant, "30");
+$light-outline: map.get($palette-neutral-variant, "50");
+
+$dark-primary: map.get($palette-primary, "80");
+$dark-on-primary: map.get($palette-primary, "20");
+$dark-primary-container: map.get($palette-primary, "30");
+$dark-primary-on-container: map.get($palette-primary, "90");
+
+$dark-secondary: map.get($palette-secondary, "80");
+$dark-on-secondary: map.get($palette-secondary, "20");
+$dark-secondary-container: map.get($palette-secondary, "30");
+$dark-secondary-on-container: map.get($palette-secondary, "90");
+
+$dark-tertiary: map.get($palette-tertiary, "80");
+$dark-on-tertiary: map.get($palette-tertiary, "20");
+$dark-tertiary-container: map.get($palette-tertiary, "30");
+$dark-tertiary-on-container: map.get($palette-tertiary, "90");
+
+$dark-error: map.get($palette-error, "80");
+$dark-on-error: map.get($palette-error, "20");
+$dark-error-container: map.get($palette-error, "30");
+$dark-error-on-container: map.get($palette-error, "90");
+
+$dark-background: map.get($palette-neutral, "10");
+$dark-on-background: map.get($palette-neutral, "90");
+$dark-surface: map.get($palette-neutral, "10");
+$dark-on-surface: map.get($palette-neutral, "80");
+
+$dark-surface-variant: map.get($palette-neutral-variant, "30");
+$dark-on-surface-variant: map.get($palette-neutral-variant, "80");
+$dark-outline: map.get($palette-neutral-variant, "60");
