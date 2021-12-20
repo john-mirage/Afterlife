@@ -1,8 +1,11 @@
+@use '../abstracts/mixins';
+
 .article {
     padding-top: 4.8rem;
     padding-bottom: 4.8rem;
 
     &__title {
         padding-bottom: 4.8rem;
+        @include mixins.display-large;
     }
 }

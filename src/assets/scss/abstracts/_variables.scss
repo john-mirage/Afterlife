@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 $palette-primary: (
     "0": #000000,
     "10": #21005D,
@@ -11,7 +13,7 @@ $palette-primary: (
     "90": #EADDFF,
     "95": #F6EDFF,
     "99": #FFFBFE,
-    "100": #FFFFFF 
+    "100": #FFFFFF
 );
 
 $palette-secondary: (

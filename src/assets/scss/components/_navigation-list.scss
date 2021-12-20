@@ -1,11 +1,14 @@
-.tab-list {
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.navigation-list {
     display: flex;
     height: 100%;
 
     &--row {
         flex-direction: row;
 
-        .tab-list__item {
+        .navigation-list__item {
             flex: 1 1 0%;
             margin: 0 0.4rem;
             padding-top: 1.2rem;
@@ -20,7 +23,7 @@
             }
         }
 
-        .tab-list__icon-container {
+        .navigation-list__icon-container {
             width: 6.4rem;
             animation-name: bottomIconContainerSpread;
         }
@@ -30,7 +33,7 @@
         flex-direction: column;
         justify-content: center;
 
-        .tab-list__item {
+        .navigation-list__item {
             flex: 0 0 5.6rem;
             margin: 0.6rem 0;
             padding-bottom: 0.4rem;
@@ -44,7 +47,7 @@
             }
         }
 
-        .tab-list__icon-container {
+        .navigation-list__icon-container {
             animation-name: leftIconContainerSpread;
             width: 5.4rem;
         }
@@ -56,7 +59,21 @@
         align-items: center;
 
         &:hover {
-            background-color: #e9d5ff;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        &--active {
+            .navigation-list__icon-container {
+                border-radius: 1.6rem;
+                background-color: variables.$light-secondary-container;
+            }
+
+            .navigation-list__icon {
+                color: variables.$light-secondary-on-container;
+            }
+            .navigation-list__label {
+                color: variables.$light-on-surface;
+            }
         }
     }
 
@@ -65,11 +82,6 @@
         height: 3.2rem;
         margin-bottom: 0.4rem;
         animation-duration: 300ms;
-
-        &--active {
-            border-radius: 1.6rem;
-            background-color: #d8b4fe;
-        }
     }
 
     &__icon {
@@ -80,12 +92,13 @@
         margin: auto;
         width: 2.4rem;
         height: 2.4rem;
-        color: #1f1f1f;
+        color: variables.$light-on-surface-variant;
     }
 
     &__label {
         height: 1.6rem;
-        color: #1f1f1f;
+        @include mixins.label-medium;
+        color: variables.$light-on-surface-variant;
     }
 }
 
