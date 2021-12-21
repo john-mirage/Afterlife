@@ -1,0 +1,35 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.fab {
+    position: fixed;
+    bottom: 1.6rem;
+    right: 1.6rem;
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 1.6rem;
+    background-color: variables.$light-primary-container;
+    @include mixins.elevation-3;
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-delay: 300ms;
+
+    &:hover {
+        @include mixins.elevation-4;
+    }
+    
+    &--hidden {
+        transform: translateX(8.8rem);
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 2.4rem;
+        color: variables.$light-primary-on-container;
+    }
+}
