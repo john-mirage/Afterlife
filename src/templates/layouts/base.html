@@ -48,6 +48,9 @@
             {% include "../components/navigation-list.html" with direction="row" %}
         </aside>
 
+        <!-- Navigation reference -->
+        <div class="navigation-reference"></div>
+
         <!-- Main -->
         <main class="main page__main">
             {% block article %}{% endblock %}
@@ -57,6 +60,10 @@
         <footer class="footer page__footer">
             <p class="footer__text">&copy; 2021 - Afterlife</p>
         </footer>
+
+        <button class="fab fab--hidden">
+            <span class="fab__icon material-icons-outlined">arrow_upward</span>
+        </button>
 
         <script defer src="{% static 'bundle.js' %}"></script>
     </body>
