@@ -1,4 +1,5 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .navigation-rail {
     display: none;
@@ -12,5 +13,11 @@
         width: 8rem;
         height: 100vh;
         background-color: variables.$light-surface;
+        padding-bottom: 25vh;
+    }
+
+    @media screen and (min-width: 1024px) {
+        padding-top: 25vh;
+        padding-bottom: 0;
     }
 }

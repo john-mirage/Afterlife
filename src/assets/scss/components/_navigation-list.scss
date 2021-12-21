@@ -31,7 +31,11 @@
 
     &--column {
         flex-direction: column;
-        justify-content: center;
+        justify-content: end;
+
+        @media screen and (min-width: 1024px) {
+            justify-content: start;
+        }
 
         .navigation-list__item {
             flex: 0 0 5.6rem;
