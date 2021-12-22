@@ -1,44 +1,39 @@
 import './main.scss';
-//import { handleNavigationBar } from './js/navigation-bar';
-//import { handleTopAppBar } from './js/top-app-bar';
+import { handleNavigationBarVisibility } from './js/navigation-bar';
+import { handleTopAppBarBoxshadow } from './js/top-app-bar';
+import { handleFab, handleInitialFabVisibility } from './js/fab';
 
-//handleNavigationBar();
-//handleTopAppBar();
+let lastScrollPosition = 0;
+let lastScrollDirection = "up";
 
-const navigationReferenceElement = document.querySelector(".navigation-reference");
+window.addEventListener("DOMContentLoaded", handleInitialScrollPosition);
+window.addEventListener("scroll", handleScrollPosition);
 
-const fabElement = document.querySelector(".fab");
-const fabHiddenClass = "fab--hidden";
-
-const navigationBarElement = document.querySelector(".navigation-bar");
-const navigationBarHiddenClass = "navigation-bar--hidden";
-
-const topAppBarElement = document.querySelector(".top-app-bar");
-const topAppBarShadowClass = "top-app-bar--with-shadow";
-
-let callbackHasBeenCalledOnce = false;
-
-const observerOption = {threshold: [0]};
-const observer = new IntersectionObserver(handleScrollPosition, observerOption);
-
-observer.observe(navigationReferenceElement);
-
-function handleScrollPosition(entries) {
-    if (callbackHasBeenCalledOnce) {
-        navigationBarElement.classList.toggle(navigationBarHiddenClass);
-        topAppBarElement.classList.toggle(topAppBarShadowClass);
-        fabElement.classList.toggle(fabHiddenClass);
-    } else {
-        if (entries[0].boundingClientRect.top < -64) {
-            topAppBarElement.classList.add(topAppBarShadowClass);
-            navigationBarElement.classList.add(navigationBarHiddenClass);
-            fabElement.classList.remove(fabHiddenClass);
-        }
-        callbackHasBeenCalledOnce = true;
-    }
+/**
+ * Handle the initial scroll position.
+ * 
+ * @param {Event} event - The event.
+ */
+function handleInitialScrollPosition(event) {
+    const currentScrollPosition = window.scrollY;
+    handleInitialFabVisibility(currentScrollPosition);
+    handleTopAppBarBoxshadow(currentScrollPosition);
+    if (lastScrollPosition !== currentScrollPosition) lastScrollPosition = currentScrollPosition;
 }
 
-fabElement.addEventListener("click", (event) => {
-    event.preventDefault();
-    window.scrollTo(0, 0);
-});
+/**
+ * Handle the scroll position.
+ * 
+ * @param {Event} event - The event.
+ */
+function handleScrollPosition(event) {
+    const currentScrollPosition = window.scrollY;
+    if (lastScrollPosition !== currentScrollPosition) {
+        const currentScrollDirection = (lastScrollPosition < currentScrollPosition) ? "down" : "up";
+        handleNavigationBarVisibility(lastScrollDirection, currentScrollDirection);
+        handleTopAppBarBoxshadow(currentScrollPosition);
+        handleFab(lastScrollDirection, currentScrollDirection, currentScrollPosition);
+        lastScrollDirection = currentScrollDirection;
+        lastScrollPosition = currentScrollPosition;
+    }
+}
