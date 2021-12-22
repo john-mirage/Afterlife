@@ -1,30 +1,19 @@
-import { debounce } from "./utils/debounce";
+const topAppBarElement = document.querySelector("#top-app-bar");
+const topAppBarBoxshadowClass = "top-app-bar--with-boxshadow";
 
-const topAppBar = {
-    domElement: document.querySelector(".top-app-bar"),
-    shadowClass: "top-app-bar--with-shadow",
-    hasShadow: false,
-    timeout: false,
-    timeoutDuration: 250,
-};
+let topAppBarHasBoxshadow = false;
 
-export function handleTopAppBar() {
-    window.addEventListener("scroll", () => {
-        debounce(
-            topAppBar.timeout,
-            topAppBar.timeoutDuration,
-            handleTopAppBarShadow
-        );
-    });
-}
-
-function handleTopAppBarShadow() {
-    const scrollPosition = window.scrollY;
-    if (scrollPosition > 64 && !topAppBar.hasShadow) {
-        topAppBar.domElement.classList.add(topAppBar.shadowClass);
-        topAppBar.hasShadow = true;
-    } else if (scrollPosition <= 64 && topAppBar.hasShadow) {
-        topAppBar.domElement.classList.remove(topAppBar.shadowClass);
-        topAppBar.hasShadow = false;
+/**
+ * Handle top app bar box shadow.
+ * 
+ * @param {number} currentScrollPosition - The current scroll position.
+ */
+export function handleTopAppBarBoxshadow(currentScrollPosition) {
+    if (!topAppBarHasBoxshadow && currentScrollPosition > 0) {
+        topAppBarElement.classList.add(topAppBarBoxshadowClass);
+        topAppBarHasBoxshadow = true;
+    } else if (topAppBarHasBoxshadow && currentScrollPosition === 0) {
+        topAppBarElement.classList.remove(topAppBarBoxshadowClass);
+        topAppBarHasBoxshadow = false;
     }
 }
