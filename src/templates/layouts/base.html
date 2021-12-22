@@ -22,7 +22,7 @@
     <body class="page">
 
         <!-- Top app bar -->
-        <header class="top-app-bar">
+        <header class="top-app-bar" id="top-app-bar">
             <div class="top-app-bar__section">
                 <a class="top-app-bar__title" href="{% url 'afterlifeIndex' %}">Afterlife</a>
             </div>
@@ -44,7 +44,7 @@
         </aside>
 
         <!-- Navigation bar -->
-        <aside class="navigation-bar">
+        <aside class="navigation-bar" id="navigation-bar">
             {% include "../components/navigation-list.html" with direction="row" %}
         </aside>
 
@@ -61,7 +61,11 @@
             <p class="footer__text">&copy; 2021 - Afterlife</p>
         </footer>
 
-        <button class="fab fab--hidden">
+        <button class="fab page__phone-fab" id="phone-fab">
+            <span class="fab__icon material-icons-outlined">arrow_upward</span>
+        </button>
+
+        <button class="fab fab--large page__desktop-fab" id="desktop-fab">
             <span class="fab__icon material-icons-outlined">arrow_upward</span>
         </button>
 
