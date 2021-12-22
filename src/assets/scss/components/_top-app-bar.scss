@@ -16,7 +16,7 @@
     transition-property: box-shadow;
     transition-duration: 300ms;
 
-    &--with-shadow {
+    &--with-boxshadow {
         @include mixins.elevation-2;
     }
 
