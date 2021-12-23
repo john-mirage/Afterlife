@@ -1,0 +1,40 @@
+@use '../../global/sass/variables';
+@use '../../global/sass/mixins';
+
+.fab {
+    display: flex;
+    align-items: center;
+    min-width: 5.6rem;
+    height: 5.6rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    border-radius: 1.6rem;
+    background-color: variables.$light-primary-container;
+    @include mixins.elevation-3;
+
+    &:hover {
+        @include mixins.elevation-4;
+    }
+
+    @media screen and (min-width: 599px) {
+        min-width: 8rem;
+    }
+
+    &__icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 2.4rem;
+        color: variables.$light-primary-on-container;
+    }
+
+    &__label {
+        display: none;
+        
+        @media screen and (min-width: 599px) {
+            display: block;
+            padding-left: 0.8rem;
+            @include mixins.label-large;
+            line-height: normal;
+        }
+    }
+}

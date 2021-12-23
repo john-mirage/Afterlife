@@ -1,13 +1,14 @@
 // Base
-@use 'scss/base/reset';
+@use 'global/sass/reset';
 
 // Components
-@use 'scss/components/top-app-bar';
-@use 'scss/components/navigation-bar';
-@use 'scss/components/navigation-rail';
-@use 'scss/components/navigation-reference';
-@use 'scss/components/navigation-list';
-@use 'scss/components/fab';
-@use 'scss/components/button';
-@use 'scss/components/card';
-@use 'scss/components/page';
+@use 'components/top-app-bar/top-app-bar';
+@use 'components/navigation/navigation-bar';
+@use 'components/navigation/navigation-rail';
+@use 'components/tab/tab-list';
+@use 'components/fab/fab';
+@use 'components/button/button';
+@use 'components/card/card';
+
+// Layouts
+@use 'layouts/page';

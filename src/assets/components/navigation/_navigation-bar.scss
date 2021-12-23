@@ -1,0 +1,14 @@
+@use '../../global/sass/variables';
+@use '../../global/sass/mixins';
+
+.navigation-bar {
+    display: block;
+    width: 100%;
+    height: 8rem;
+    background-color: variables.$light-surface;
+    @include mixins.elevation-2;
+
+    @media screen and (min-width: 599px) {
+        display: none;
+    }
+}

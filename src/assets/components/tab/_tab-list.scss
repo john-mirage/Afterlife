@@ -1,18 +1,20 @@
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
+@use '../../global/sass/variables';
+@use '../../global/sass/mixins';
 
-.navigation-list {
-    display: flex;
-    height: 100%;
+.tab-list {
+    width: 100%;
 
     &--row {
+        display: flex;
         flex-direction: row;
+        height: 100%;
 
-        .navigation-list__item {
-            flex: 1 1 0%;
+        .tab-list__item {
+            flex: 1 1 4.8rem;
+            justify-content: center;
+            min-width: 4.8rem;
+            height: 100%;
             margin: 0 0.4rem;
-            padding-top: 1.2rem;
-            padding-bottom: 1.6rem;
 
             &:first-child {
                 margin-left: 0;
@@ -23,20 +25,20 @@
             }
         }
 
-        .navigation-list__icon-container {
+        .tab-list__icon-container {
             width: 6.4rem;
-            animation-name: bottomIconContainerSpread;
+            animation-name: navigationBarAnimation;
         }
     }
 
-    &--column {
-        flex-direction: column;
-        justify-content: center;
+    &--col {
+        display: block;
+        height: auto;
 
-        .navigation-list__item {
-            flex: 0 0 5.6rem;
+        .tab-list__item {
+            width: 100%;
+            height: 5.6rem;
             margin: 0.6rem 0;
-            padding-bottom: 0.4rem;
 
             &:first-child {
                 margin-top: 0;
@@ -47,9 +49,9 @@
             }
         }
 
-        .navigation-list__icon-container {
-            animation-name: leftIconContainerSpread;
-            width: 5.4rem;
+        .tab-list__icon-container {
+            width: 5.6rem;
+            animation-name: navigationRailAnimation;
         }
     }
 
@@ -57,21 +59,22 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 0.4rem;
 
         &:hover {
             background-color: rgba(0, 0, 0, 0.2);
         }
 
         &--active {
-            .navigation-list__icon-container {
+            .tab-list__icon-container {
                 border-radius: 1.6rem;
                 background-color: variables.$light-secondary-container;
             }
-
-            .navigation-list__icon {
+    
+            .tab-list__icon {
                 color: variables.$light-secondary-on-container;
             }
-            .navigation-list__label {
+            .tab-list__label {
                 color: variables.$light-on-surface;
             }
         }
@@ -79,6 +82,7 @@
 
     &__icon-container {
         position: relative;
+        width: 6.4rem;
         height: 3.2rem;
         margin-bottom: 0.4rem;
         animation-duration: 300ms;
@@ -102,16 +106,16 @@
     }
 }
 
-@keyframes leftIconContainerSpread {
+@keyframes navigationRailAnimation {
     from {
         width: 2.4rem;
     }
     to {
-        width: 5.4rem;
+        width: 5.6rem;
     }
 }
 
-@keyframes bottomIconContainerSpread {
+@keyframes navigationBarAnimation {
     from {
         width: 2.4rem;
     }

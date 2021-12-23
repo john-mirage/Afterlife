@@ -1,5 +1,5 @@
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
+@use '../../global/sass/variables';
+@use '../../global/sass/mixins';
 
 .button {
     display: flex;

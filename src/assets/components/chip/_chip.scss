@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
+@use '../../global/sass/variables';
+@use '../../global/sass/mixins';
 
 .chip {
     height: 3.2rem;

@@ -1,0 +1,59 @@
+@use '../global/sass/variables';
+
+.page {
+    background-color: variables.$light-surface;
+    height: 2000px;
+
+    &__navigation-rail {
+        @media screen and (min-width: 599px) {
+            position: fixed;
+            z-index: 80;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__navigation-bar {
+        position: fixed;
+        z-index: 80;
+        bottom: 0;
+        left: 0;
+        transition-property: transform;
+        transition-duration: 300ms;
+
+        &--hidden {
+            transform: translateY(8rem);
+        }
+    }
+
+    &__main {
+        padding-top: 6.4rem;
+
+        @media screen and (min-width: 599px) {
+            padding-left: 8rem;
+        }
+    }
+
+    &__fab {
+        position: fixed;
+        bottom: 9.6rem;
+        right: 1.6rem;
+        transition-property: visibility, opacity;
+        transition-duration: 300ms;
+        visibility: hidden;
+        opacity: 0;
+
+        @media screen and (min-width: 599px) {
+            bottom: 1.6rem;
+        }
+
+        &--visible {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &__footer {
+
+    }
+}

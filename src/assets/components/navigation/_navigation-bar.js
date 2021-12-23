@@ -1,5 +1,5 @@
 const navigationBarElement = document.querySelector("#navigation-bar");
-const navigationBarHiddenClass = "navigation-bar--hidden";
+const navigationBarHiddenClass = "page__navigation-bar--hidden";
 
 /**
  * Handle the navigation bar visibility.

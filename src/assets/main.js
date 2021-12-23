@@ -1,13 +1,10 @@
 import './main.scss';
-import { handleNavigationBarVisibility } from './js/navigation-bar';
-import { handleTopAppBarBoxshadow } from './js/top-app-bar';
-import { handleFab, handleInitialFabVisibility } from './js/fab';
+import { handleNavigationBarVisibility } from './components/navigation/_navigation-bar.js';
+import { handleTopAppBarBoxshadow } from './components/top-app-bar/_top-app-bar.js';
+import { handleFab, handleInitialFabVisibility, handleFabAction } from './components/fab/_fab.js';
 
 let lastScrollPosition = 0;
 let lastScrollDirection = "up";
-
-window.addEventListener("DOMContentLoaded", handleInitialScrollPosition);
-window.addEventListener("scroll", handleScrollPosition);
 
 /**
  * Handle the initial scroll position.
@@ -37,3 +34,8 @@ function handleScrollPosition(event) {
         lastScrollPosition = currentScrollPosition;
     }
 }
+
+window.addEventListener("load", handleInitialScrollPosition);
+window.addEventListener("scroll", handleScrollPosition);
+
+handleFabAction();

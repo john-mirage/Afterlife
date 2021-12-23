@@ -1,15 +1,12 @@
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
+@use '../../global/sass/variables';
+@use '../../global/sass/mixins';
 
 .navigation-rail {
     display: none;
 
     @media screen and (min-width: 599px) {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 80;
+        display: flex;
+        align-items: center;
         width: 8rem;
         height: 100vh;
         background-color: variables.$light-surface;
