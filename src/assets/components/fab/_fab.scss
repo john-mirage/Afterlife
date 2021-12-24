@@ -16,7 +16,7 @@
         @include mixins.elevation-4;
     }
 
-    @media screen and (min-width: 599px) {
+    @media screen and (min-width: 600px) {
         min-width: 8rem;
     }
 
@@ -30,7 +30,7 @@
     &__label {
         display: none;
         
-        @media screen and (min-width: 599px) {
+        @media screen and (min-width: 600px) {
             display: block;
             padding-left: 0.8rem;
             @include mixins.label-large;
