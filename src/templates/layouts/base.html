@@ -22,97 +22,29 @@
     <body class="page">
 
         <!-- Top app bar -->
-        <header class="top-app-bar" id="top-app-bar">
-            <div class="top-app-bar__section">
-                <a class="top-app-bar__title" href="{% url 'afterlifeIndex' %}">Afterlife</a>
-            </div>
-            <div class="top-app-bar__section">
-                <button class="button">
-                    <span class="button__icon material-icons-outlined">dark_mode</span>
-                    <span class="button__label">Dark mode</span>
-                </button>
-                <a class="button button--left-margin" href="https://github.com/ChaosDynamix/Afterlife">
-                    <span class="button__icon material-icons-outlined">code</span>
-                    <span class="button__label">Source code</span>
-                </a>
-            </div>
-        </header>
+        {% include "../components/top-app-bar.html" %}
 
         <!-- Navigation rail-->
-        <aside class="navigation-rail page__navigation-rail">
-            <nav class="tab-list tab-list--col">
-                <a class="tab-list__item {% if active_tab == 'home' %}tab-list__item--active{% endif %}" href="{% url 'afterlifeIndex' %}">
-                    <div class="tab-list__icon-container">
-                        <span class="tab-list__icon material-icons{% if active_tab != 'home' %}-outlined{% endif %}">home</span>
-                    </div>
-                    <span class="tab-list__label">Home</span>
-                </a>
-                <a class="tab-list__item {% if active_tab == 'posts' %}tab-list__item--active{% endif %}" href="{% url 'postsIndex' %}">
-                    <div class="tab-list__icon-container">
-                        <span class="tab-list__icon material-icons{% if active_tab != 'posts' %}-outlined{% endif %}">article</span>
-                    </div>
-                    <span class="tab-list__label">Posts</span>
-                </a>
-                <a class="tab-list__item {% if active_tab == 'stories' %}tab-list__item--active{% endif %}" href="{% url 'storiesIndex' %}">
-                    <div class="tab-list__icon-container">
-                        <span class="tab-list__icon material-icons{% if active_tab != 'stories' %}-outlined{% endif %}">book</span>
-                    </div>
-                    <span class="tab-list__label">Stories</span>
-                </a>
-                <a class="tab-list__item {% if active_tab == 'notes' %}tab-list__item--active{% endif %}" href="{% url 'notesIndex' %}">
-                    <div class="tab-list__icon-container">
-                        <span class="tab-list__icon material-icons{% if active_tab != 'notes' %}-outlined{% endif %}">note</span>
-                    </div>
-                    <span class="tab-list__label">Notes</span>
-                </a>
-            </nav>
-        </aside>
+        {% include "../components/navigation-rail.html" %}
 
         <!-- Navigation bar -->
-        <aside class="navigation-bar page__navigation-bar" id="navigation-bar">
-            <nav class="tab-list tab-list--row">
-                <a class="tab-list__item {% if active_tab == 'home' %}tab-list__item--active{% endif %}" href="{% url 'afterlifeIndex' %}">
-                    <div class="tab-list__icon-container">
-                        <span class="tab-list__icon material-icons{% if active_tab != 'home' %}-outlined{% endif %}">home</span>
-                    </div>
-                    <span class="tab-list__label">Home</span>
-                </a>
-                <a class="tab-list__item {% if active_tab == 'posts' %}tab-list__item--active{% endif %}" href="{% url 'postsIndex' %}">
-                    <div class="tab-list__icon-container">
-                        <span class="tab-list__icon material-icons{% if active_tab != 'posts' %}-outlined{% endif %}">article</span>
-                    </div>
-                    <span class="tab-list__label">Posts</span>
-                </a>
-                <a class="tab-list__item {% if active_tab == 'stories' %}tab-list__item--active{% endif %}" href="{% url 'storiesIndex' %}">
-                    <div class="tab-list__icon-container">
-                        <span class="tab-list__icon material-icons{% if active_tab != 'stories' %}-outlined{% endif %}">book</span>
-                    </div>
-                    <span class="tab-list__label">Stories</span>
-                </a>
-                <a class="tab-list__item {% if active_tab == 'notes' %}tab-list__item--active{% endif %}" href="{% url 'notesIndex' %}">
-                    <div class="tab-list__icon-container">
-                        <span class="tab-list__icon material-icons{% if active_tab != 'notes' %}-outlined{% endif %}">note</span>
-                    </div>
-                    <span class="tab-list__label">Notes</span>
-                </a>
-            </nav>
-        </aside>
+        {% include "../components/navigation-bar.html" %}
 
         <!-- Main -->
         <main class="main page__main">
-            {% block article %}{% endblock %}
+            <div class="container">
+
+                <!-- Article -->
+                {% block article %}{% endblock %}
+
+                <!-- Footer -->
+                {% include "../components/footer.html" %}
+
+            </div>
         </main>
 
-        <!-- Footer -->
-        <footer class="footer page__footer">
-            <p class="footer__text">&copy; 2021 - Afterlife</p>
-        </footer>
-
         <!-- Fab -->
-        <button class="fab page__fab" id="fab">
-            <span class="fab__icon material-icons-outlined">arrow_upward</span>
-            <span class="fab__label">Go to the top</span>
-        </button>
+        {% include "../components/fab.html" %}
 
         <script defer src="{% static 'bundle.js' %}"></script>
     </body>
