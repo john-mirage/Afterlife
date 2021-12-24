@@ -4,7 +4,7 @@
 .navigation-rail {
     display: none;
 
-    @media screen and (min-width: 599px) {
+    @media screen and (min-width: 600px) {
         display: flex;
         align-items: center;
         width: 8rem;

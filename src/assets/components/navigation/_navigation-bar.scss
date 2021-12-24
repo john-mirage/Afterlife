@@ -8,7 +8,7 @@
     background-color: variables.$light-surface;
     @include mixins.elevation-2;
 
-    @media screen and (min-width: 599px) {
+    @media screen and (min-width: 600px) {
         display: none;
     }
 }
