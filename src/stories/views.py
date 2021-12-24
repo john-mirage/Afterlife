@@ -1,4 +1,5 @@
 from django.shortcuts import render
 
 def stories_index(request):
-    return render(request, 'pages/stories_index.html')
+    context = {'active_tab': 'stories'}
+    return render(request, 'pages/stories_index.html', context)
