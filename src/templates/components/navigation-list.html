@@ -1,0 +1,26 @@
+<nav class="navigation-list navigation-list--{{ direction }}">
+    <a class="navigation-list__item {% if active_tab == 'home' %}navigation-list__item--active{% endif %}" href="{% url 'afterlifeIndex' %}">
+        <div class="navigation-list__icon-container">
+            <span class="navigation-list__icon material-icons{% if active_tab != 'home' %}-outlined{% endif %}">home</span>
+        </div>
+        <span class="typography typography--label-md navigation-list__label">Home</span>
+    </a>
+    <a class="navigation-list__item {% if active_tab == 'posts' %}navigation-list__item--active{% endif %}" href="{% url 'postsIndex' %}">
+        <div class="navigation-list__icon-container">
+            <span class="navigation-list__icon material-icons{% if active_tab != 'posts' %}-outlined{% endif %}">article</span>
+        </div>
+        <span class="typography typography--label-md navigation-list__label">Posts</span>
+    </a>
+    <a class="navigation-list__item {% if active_tab == 'stories' %}navigation-list__item--active{% endif %}" href="{% url 'storiesIndex' %}">
+        <div class="navigation-list__icon-container">
+            <span class="navigation-list__icon material-icons{% if active_tab != 'stories' %}-outlined{% endif %}">book</span>
+        </div>
+        <span class="typography typography--label-md navigation-list__label">Stories</span>
+    </a>
+    <a class="navigation-list__item {% if active_tab == 'notes' %}navigation-list__item--active{% endif %}" href="{% url 'notesIndex' %}">
+        <div class="navigation-list__icon-container">
+            <span class="navigation-list__icon material-icons{% if active_tab != 'notes' %}-outlined{% endif %}">note</span>
+        </div>
+        <span class="typography typography--label-md navigation-list__label">Notes</span>
+    </a>
+</nav>
