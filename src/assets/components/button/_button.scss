@@ -28,7 +28,6 @@
     }
     
     &__label {
-        @include mixins.label-large;
         line-height: normal;
         color: variables.$light-secondary-on-container;
     }

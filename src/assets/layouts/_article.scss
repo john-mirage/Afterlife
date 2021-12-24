@@ -6,6 +6,9 @@
 
     &__title {
         padding-bottom: 4.8rem;
-        @include mixins.display-large;
+    }
+
+    &__tab-list {
+        padding: 3.2rem 0;
     }
 }

@@ -1,7 +1,7 @@
 @use '../global/sass/variables';
 
 .page {
-    background-color: variables.$light-surface;
+    background-color: white;
     height: 2000px;
 
     &__top-app-bar {
@@ -63,6 +63,6 @@
     }
 
     &__footer {
-
+        margin-top: 1.6rem;
     }
 }

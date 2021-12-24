@@ -1,7 +1,7 @@
 @use '../../global/sass/variables';
 @use '../../global/sass/mixins';
 
-.tab-list {
+.navigation-list {
     width: 100%;
 
     &--row {
@@ -9,7 +9,7 @@
         flex-direction: row;
         height: 8rem;
 
-        .tab-list__item {
+        .navigation-list__item {
             flex: 1 1 4.8rem;
             justify-content: center;
             min-width: 4.8rem;
@@ -21,7 +21,7 @@
             }
         }
 
-        .tab-list__icon-container {
+        .navigation-list__icon-container {
             width: 6.4rem;
             animation-name: navigationBarAnimation;
         }
@@ -31,7 +31,7 @@
         display: block;
         height: auto;
 
-        .tab-list__item {
+        .navigation-list__item {
             width: 100%;
             height: 5.6rem;
             margin-bottom: 1.2rem;
@@ -41,7 +41,7 @@
             }
         }
 
-        .tab-list__icon-container {
+        .navigation-list__icon-container {
             width: 5.6rem;
             animation-name: navigationRailAnimation;
         }
@@ -58,15 +58,15 @@
         }
 
         &--active {
-            .tab-list__icon-container {
+            .navigation-list__icon-container {
                 border-radius: 1.6rem;
                 background-color: variables.$light-secondary-container;
             }
     
-            .tab-list__icon {
+            .navigation-list__icon {
                 color: variables.$light-secondary-on-container;
             }
-            .tab-list__label {
+            .navigation-list__label {
                 color: variables.$light-on-surface;
             }
         }
