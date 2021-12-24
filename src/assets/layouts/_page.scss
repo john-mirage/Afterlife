@@ -4,6 +4,13 @@
     background-color: variables.$light-surface;
     height: 2000px;
 
+    &__top-app-bar {
+        position: fixed;
+        z-index: 90;
+        top: 0;
+        left: 0;
+    }
+
     &__navigation-rail {
         @media screen and (min-width: 599px) {
             position: fixed;
