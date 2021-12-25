@@ -1,9 +1,29 @@
 .container {
-    width: 100%;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
 
-    @media screen and (min-width: 905px) {
-        margin-left: auto;
-        margin-right: auto;
-        width: 760px;
+    @media screen and (min-width: 600px) {
+        padding-left: 3.2rem;
+        padding-right: 3.2rem;
+    }
+
+    &__inner {
+        width: 100%;
+
+        @media screen and (min-width: 905px) {
+            margin-left: auto;
+            margin-right: auto;
+            width: 760px;
+        }
+    }
+
+    &__body {
+        
+    }
+
+    &__footer {
+        padding: 2.4rem 0;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+        text-align: center;
     }
 }

@@ -15,11 +15,10 @@
 @use 'components/typography/typography';
 @use 'components/chip/chip-list';
 @use 'components/chip/chip';
+@use 'components/search-form/search-form';
+@use 'components/separator/separator';
 
 // Layouts
 @use 'layouts/page';
-@use 'layouts/main';
-@use 'layouts/grid';
 @use 'layouts/container';
 @use 'layouts/article';
-@use 'layouts/footer';

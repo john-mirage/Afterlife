@@ -2,9 +2,6 @@
 @use '../../global/sass/mixins';
 
 .card {
-    padding: 1.6rem;
-    border-radius: 1.2rem;
-    background-color: variables.$light-surface-variant;
 
     &__title {
         margin-bottom: 0.8rem;
