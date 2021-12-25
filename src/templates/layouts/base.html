@@ -27,24 +27,26 @@
         <!-- Navigation rail-->
         {% include "../components/navigation-rail.html" %}
 
-        <!-- Navigation bar -->
-        {% include "../components/navigation-bar.html" %}
+        <!-- Container -->
+        <div class="container page__container">
+            <div class="container__inner">
 
-        <!-- Main -->
-        <main class="main page__main">
-            <div class="container">
+                <main class="container__body">
+                    {% block article %}{% endblock %}
+                </main>
 
-                <!-- Article -->
-                {% block article %}{% endblock %}
-
-                <!-- Footer -->
-                {% include "../components/footer.html" %}
+                <footer class="container__footer">
+                    <p class="typography typography--body-md">&copy; 2021 - Afterlife</p>
+                </footer>
 
             </div>
-        </main>
+        </div>
 
-        <!-- Fab -->
+        <!-- Floating action button -->
         {% include "../components/fab.html" %}
+
+        <!-- Navigation bar -->
+        {% include "../components/navigation-bar.html" %}
 
         <script defer src="{% static 'bundle.js' %}"></script>
     </body>
