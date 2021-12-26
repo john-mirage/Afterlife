@@ -10,10 +10,40 @@
             {% include "../components/tab-list.html" with direction="row" %}
         </div>
         <div class="search-form">
-            <input class="typography typography--label-lg search-form__input" placeholder="Search a post" type="text">
+            <input class="typography typography--title-md search-form__input" placeholder="Search a post" type="text">
             <span class="material-icons-outlined search-form__icon">search</span>
         </div>
     </header>
+
+    <div class="article__results">
+        <h1 class="typography typography--title-lg article__results-title">Latest posts</h1>
+        <div class="filter">
+            <input class="filter__checkbox" id="filter-checkbox" name="filter-checkbox" type="checkbox">
+            <label class="filter__button" for="filter-checkbox">
+                <span class="material-icons filter__icon">sort</span>
+                <span class="typography typography--title-md filter__label">Sort by</span>
+            </label>
+            <ul class="menu filter__menu filter__menu--right">
+                <li class="menu__item">
+                    <a class="menu__link menu__link--active" href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+                        </svg>
+                        <span class="typography typography--body-lg menu__text">Most recent first</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+                        </svg>
+                        <span class="typography typography--body-lg menu__text">Most oldest first</span>
+                    </a>
+                </li>
+            </ul>
+            <label class="filter__scrim" for="filter-checkbox"></label>
+        </div>
+    </div>
 
     <ul class="card-list article__body">
         <li class="card-list__item">
@@ -33,7 +63,6 @@
                     </li>
                 </ul>
             </article>
-            <div class="separator"></div>
 
         </li>
 
