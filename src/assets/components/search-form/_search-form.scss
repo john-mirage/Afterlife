@@ -12,8 +12,12 @@
         border-radius: 2.8rem;
         outline: none;
         border: none;
-        background-color: variables.$light-surface;
+        background-color: variables.$light-surface-variant;
         padding-left: 5.6rem;
+
+        &:focus {
+            background-color: variables.$light-primary-container;
+        }
     }
 
     &__icon {
