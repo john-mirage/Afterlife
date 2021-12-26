@@ -53,7 +53,7 @@
         @media screen and (min-width: 600px) {
             bottom: 1.6rem;
             right: 50%;
-            transform: translateX(50%);
+            transform: translateX(50%) translateX(4rem);
         }
 
         &--visible {
