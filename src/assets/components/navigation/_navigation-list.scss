@@ -91,6 +91,12 @@
         color: variables.$light-on-surface-variant;
     }
 
+    &__badge {
+        position: absolute;
+        top: 0;
+        left: 50%;
+    }
+
     &__label {
         height: 1.6rem;
         color: variables.$light-on-surface-variant;
