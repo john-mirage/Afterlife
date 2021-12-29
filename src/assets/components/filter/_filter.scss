@@ -1,4 +1,5 @@
-@use '../../global/sass/mixins';
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
 
 .filter {
     position: relative;

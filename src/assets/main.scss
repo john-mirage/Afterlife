@@ -1,22 +1,24 @@
 // Base
-@use 'global/sass/reset';
+@use 'base/reset';
 
 // Components
 @use 'components/top-app-bar/top-app-bar';
 @use 'components/navigation/navigation-bar';
 @use 'components/navigation/navigation-rail';
 @use 'components/navigation/navigation-list';
+@use 'components/badge/badge';
 @use 'components/tab/tab-list';
 @use 'components/fab/fab';
 @use 'components/button/button';
 @use 'components/icon-button/icon-button';
 @use 'components/card/card-list';
 @use 'components/card/card';
-@use 'components/typography/typography';
 @use 'components/chip/chip-list';
 @use 'components/chip/chip';
-@use 'components/search-form/search-form';
-@use 'components/separator/separator';
+@use 'components/search/search';
+@use 'components/menu/menu';
+@use 'components/filter/filter';
+@use 'components/divider/divider';
 
 // Layouts
 @use 'layouts/page';

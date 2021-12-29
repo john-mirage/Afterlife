@@ -1,4 +1,5 @@
-@use '../../global/sass/variables';
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
 
 .icon-button {
     display: block;

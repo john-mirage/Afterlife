@@ -1,8 +1,8 @@
-@use '../global/sass/variables';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .page {
     background-color: white;
-    height: 2000px;
 
     &__top-app-bar {
         position: fixed;
