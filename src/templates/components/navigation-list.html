@@ -4,7 +4,7 @@
         <div class="navigation-list__icon-container">
             <span class="material-icons{% if active_tab != 'home' %}-outlined{% endif %} navigation-list__icon">home</span>
         </div>
-        <span class="typography typography--label-md navigation-list__label">Home</span>
+        <span class="navigation-list__label">Home</span>
     </a>
 
     <a class="navigation-list__item {% if active_tab == 'posts' %}navigation-list__item--active{% endif %}" href="{% url 'postsIndex' %}">
@@ -14,21 +14,21 @@
                 <span class="typography typography--label-sm badge__label">30</span>
             </div>
         </div>
-        <span class="typography typography--label-md navigation-list__label">Posts</span>
+        <span class="navigation-list__label">Posts</span>
     </a>
 
     <a class="navigation-list__item {% if active_tab == 'stories' %}navigation-list__item--active{% endif %}" href="{% url 'storiesIndex' %}">
         <div class="navigation-list__icon-container">
             <span class="material-icons{% if active_tab != 'stories' %}-outlined{% endif %} navigation-list__icon">book</span>
         </div>
-        <span class="typography typography--label-md navigation-list__label">Stories</span>
+        <span class="navigation-list__label">Stories</span>
     </a>
 
     <a class="navigation-list__item {% if active_tab == 'notes' %}navigation-list__item--active{% endif %}" href="{% url 'notesIndex' %}">
         <div class="navigation-list__icon-container">
             <span class="material-icons{% if active_tab != 'notes' %}-outlined{% endif %} navigation-list__icon">note</span>
         </div>
-        <span class="typography typography--label-md navigation-list__label">Notes</span>
+        <span class="navigation-list__label">Notes</span>
     </a>
 
 </nav>

@@ -6,24 +6,21 @@
 <article class="article">
 
     <header class="article__header">
-        <div class="article__tab-list">
-            {% include "../components/tab-list.html" with direction="row" %}
-        </div>
-        <div class="search-form">
-            <input class="typography typography--title-md search-form__input" placeholder="Search a post" type="text">
-            <span class="material-icons-outlined search-form__icon">search</span>
-        </div>
+        {% include '../components/search.html' %}
     </header>
+
+    <div class="separator"></div>
 
     <div class="article__results">
         <h1 class="typography typography--title-lg article__results-title">Latest posts</h1>
-        <div class="filter">
-            <input class="filter__checkbox" id="filter-checkbox" name="filter-checkbox" type="checkbox">
-            <label class="filter__button" for="filter-checkbox">
-                <span class="material-icons filter__icon">sort</span>
-                <span class="typography typography--title-md filter__label">Sort by</span>
+
+        <div class="chip chip--filter">
+            <input class="chip__input" type="radio" id="post-filter" value="post-filter" name="search-filter" checked>
+            <label class="chip__button" for="post-filter">
+                <span class="chip__label">Posts</span>
+                <span class="material-icons chip__icon">done</span>
             </label>
-            <ul class="menu filter__menu filter__menu--right">
+            <ul class="menu chip__menu chip__menu--right">
                 <li class="menu__item">
                     <a class="menu__link menu__link--active" href="">
                         <svg xmlns="http://www.w3.org/2000/svg" class="menu__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -41,7 +38,16 @@
                     </a>
                 </li>
             </ul>
-            <label class="filter__scrim" for="filter-checkbox"></label>
+            <label class="chip__scrim" for="chip-checkbox"></label>
+        </div>
+
+        <div class="filter">
+            <input class="filter__checkbox" id="filter-checkbox" name="filter-checkbox" type="checkbox">
+            <label class="filter__button" for="filter-checkbox">
+                <span class="material-icons filter__icon">sort</span>
+                <span class="filter__label">Sort by</span>
+            </label>
+            
         </div>
     </div>
 
@@ -49,17 +55,17 @@
         <li class="card-list__item">
 
             <article class="card">
-                <h3 class="typography typography--title-lg card__title">Title of the card</h3>
-                <p class="typography typography--body-md card__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis porro in magnam saepe consequatur distinctio quas illum, voluptas perferendis ipsam labore id, molestias, natus facere rerum? Ipsa soluta ad dolores.</p>
+                <h3 class="card__title">Title of the card</h3>
+                <p class="card__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis porro in magnam saepe consequatur distinctio quas illum, voluptas perferendis ipsam labore id, molestias, natus facere rerum? Ipsa soluta ad dolores.</p>
                 <ul class="chip-list">
                     <li class="chip-list__item">
-                        <a class="typography typography--label-lg chip" href="">Windows</a>
+                        <a class="chip chip--assist" href="">Windows</a>
                     </li>
                     <li class="chip-list__item">
-                        <a class="typography typography--label-lg chip" href="">Android</a>
+                        <a class="chip chip--assist" href="">Android</a>
                     </li>
                     <li class="chip-list__item">
-                        <a class="typography typography--label-lg chip" href="">Linux</a>
+                        <a class="chip chip--assist" href="">Linux</a>
                     </li>
                 </ul>
             </article>
@@ -69,17 +75,17 @@
         <li class="card-list__item">
 
             <article class="card">
-                <h3 class="typography typography--title-lg card__title">Title of the card</h3>
-                <p class="typography typography--body-md card__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis porro in magnam saepe consequatur distinctio quas illum, voluptas perferendis ipsam labore id, molestias, natus facere rerum? Ipsa soluta ad dolores.</p>
+                <h3 class="card__title">Title of the card</h3>
+                <p class="card__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis porro in magnam saepe consequatur distinctio quas illum, voluptas perferendis ipsam labore id, molestias, natus facere rerum? Ipsa soluta ad dolores.</p>
                 <ul class="chip-list">
                     <li class="chip-list__item">
-                        <a class="typography typography--label-lg chip" href="">Windows</a>
+                        <a class="chip chip--assist" href="">Windows</a>
                     </li>
                     <li class="chip-list__item">
-                        <a class="typography typography--label-lg chip" href="">Android</a>
+                        <a class="chip chip--assist" href="">Android</a>
                     </li>
                     <li class="chip-list__item">
-                        <a class="typography typography--label-lg chip" href="">Linux</a>
+                        <a class="chip chip--assist" href="">Linux</a>
                     </li>
                 </ul>
             </article>
