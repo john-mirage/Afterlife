@@ -98,6 +98,7 @@
     }
 
     &__label {
+        @include mixins.text-label-md;
         height: 1.6rem;
         color: variables.$light-on-surface-variant;
     }

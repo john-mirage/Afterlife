@@ -97,6 +97,7 @@
     }
     
     &__label {
+        @include mixins.text-label-lg;
         line-height: normal;
     }
 }

@@ -40,6 +40,7 @@
     }
     
     &__label {
+        @include mixins.text-title-md;
         line-height: normal;
     }
 }

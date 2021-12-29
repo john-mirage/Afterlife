@@ -7,10 +7,12 @@
     border-radius: 1.6rem;
 
     &__title {
+        @include mixins.text-title-lg;
         margin-bottom: 0.8rem;
     }
 
     &__description {
+        @include mixins.text-body-md;
         margin-bottom: 1.6rem;
     }
 }

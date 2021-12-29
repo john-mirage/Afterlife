@@ -1,3 +1,5 @@
+@use '../../global/sass/mixins';
+
 .filter {
     position: relative;
 
@@ -29,6 +31,7 @@
     }
 
     &__label {
+        @include mixins.text-title-md;
         line-height: normal;
     }
 

@@ -68,6 +68,7 @@
     }
 
     &__label {
+        @include mixins.text-label-lg;
         display: block;
         line-height: normal;
     }

@@ -76,6 +76,7 @@
         display: none;
         
         @media screen and (min-width: 600px) {
+            @include mixins.text-label-lg;
             display: block;
             padding-left: 0.8rem;
             line-height: normal;

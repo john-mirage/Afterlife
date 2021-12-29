@@ -42,6 +42,7 @@
     }
 
     &__text {
+        @include mixins.text-body-lg;
         line-height: normal;
         white-space: nowrap;
     }

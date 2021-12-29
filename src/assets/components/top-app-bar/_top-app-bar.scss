@@ -24,6 +24,7 @@
     }
 
     &__title {
+        @include mixins.text-title-lg;
         color: variables.$light-on-surface;
         line-height: normal;
     }
