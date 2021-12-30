@@ -4,9 +4,11 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   mode: 'development',
   context: path.resolve(__dirname, 'src'),
-  entry: './assets/main.js',
+  entry: {
+    afterlife_index: './assets/pages/afterlife_index/afterlife_index.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'src/static')
   },
   plugins: [
