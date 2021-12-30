@@ -1,5 +1,3 @@
-{% load static %}
-
 <!doctype html>
 
 <html lang="en" dir="ltr">
@@ -13,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'main.css' %}">
+        <link rel="stylesheet" href="{% block page_stylesheet %}{% endblock %}">
         {% filter truncatechars_html:55 %}
         <title>Afterlife - {% block page_title %}{% endblock %}</title>
         {% endfilter %}
@@ -22,10 +20,10 @@
     <body class="page">
 
         <!-- Top app bar -->
-        {% include "../components/top-app-bar/_top-app-bar.html" %}
+        {% include "../../components/top-app-bar/_top-app-bar.html" %}
 
         <!-- Navigation rail-->
-        {% include "../components/navigation-rail/_navigation-rail.html" %}
+        {% include "../../components/navigation-rail/_navigation-rail.html" %}
 
         <!-- Container -->
         <div class="container page__container">
@@ -35,18 +33,18 @@
                     {% block article %}{% endblock %}
                 </main>
 
-                {% include "../components/footer/_footer.html" %}
+                {% include "../../components/footer/_footer.html" %}
 
             </div>
         </div>
 
         <!-- Floating action button -->
-        {% include "../components/fab/_fab.html" with fab_type="extended" %}
+        {% include "../../components/fab/_fab.html" with fab_variant="extended" fab_icon="arrow_upward" fab_text="Scroll top" %}
 
         <!-- Navigation bar -->
-        {% include "../components/navigation-bar/_navigation-bar.html" %}
+        {% include "../../components/navigation-bar/_navigation-bar.html" %}
 
-        <script defer src="{% static 'bundle.js' %}"></script>
+        <script defer src="{% block page_script %}{% endblock %}"></script>
     </body>
 
 </html>

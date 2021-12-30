@@ -1,9 +1,11 @@
-{% extends "layouts/base.html" %}
+{% extends "../../layouts/base/_base.html" %}
 
+{% load static %}
+
+{% block page_stylesheet %}{% static 'afterlife_index.css' %}{% endblock %}
+{% block page_script %}{% static 'afterlife_index.js' %}{% endblock %}
 {% block page_title %}Home{% endblock %}
 
 {% block article %}
-
 {% include "../../components/button/_button.html" with button_variant="text" button_link="postsIndex" button_label="Show the articles" %}
-
 {% endblock %}

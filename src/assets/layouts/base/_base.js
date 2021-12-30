@@ -1,7 +1,6 @@
-import './main.scss';
-import { handleNavigationBarVisibility } from './components/navigation-bar/_navigation-bar.js';
-import { handleTopAppBarBoxshadow } from './components/top-app-bar/_top-app-bar.js';
-import { handleFab, handleInitialFabVisibility, handleFabAction } from './components/fab/_fab.js';
+import { handleNavigationBarVisibility } from '../../components/navigation-bar/_navigation-bar.js';
+import { handleTopAppBarBoxshadow } from '../../components/top-app-bar/_top-app-bar.js';
+import { handleFab, handleInitialFabVisibility, handleFabAction } from '../../components/fab/_fab.js';
 
 let lastScrollPosition = 0;
 let lastScrollDirection = "up";
