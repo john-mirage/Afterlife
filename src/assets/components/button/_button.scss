@@ -1,8 +1,9 @@
 @use 'sass:map';
-@use '../../abstracts/variables';
-@use '../../abstracts/mixins';
+@use '../../utils/variables';
+@use '../../utils/mixins';
 
 .button {
+    position: relative;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -15,12 +16,45 @@
         background-color: variables.$light-surface;
         @include mixins.elevation-1;
 
+        &:hover {
+            @include mixins.elevation-2;
+            .button__state-layer {
+                background-color: rgba($color: variables.$light-primary, $alpha: 0.08);
+            }
+        }
+
+        &:focus,
+        &:active {
+            .button__state-layer {
+                background-color: rgba($color: variables.$light-primary, $alpha: 0.12);
+            }
+        }
+
+        &-disabled {
+            padding-left: 1.6rem;
+            padding-right: 2.4rem;
+            border-radius: 2rem;
+            background-color: rgba($color: variables.$light-on-surface, $alpha: 0.12);
+
+            .button__icon {
+                color: rgba($color: variables.$light-on-surface, $alpha: 0.38);
+            }
+
+            .button__label {
+                color: rgba($color: variables.$light-on-surface, $alpha: 0.38);
+            }
+        }
+
         .button__icon {
             color: variables.$light-primary;
         }
 
         .button__label {
             color: variables.$light-primary;
+        }
+
+        .button__state-layer {
+            border-radius: 2rem;
         }
     }
 
@@ -30,12 +64,45 @@
         border-radius: 2rem;
         background-color: variables.$light-primary;
 
+        &:hover {
+            @include mixins.elevation-1;
+            .button__state-layer {
+                background-color: rgba($color: variables.$light-on-primary, $alpha: 0.08);
+            }
+        }
+
+        &:focus,
+        &:active {
+            .button__state-layer {
+                background-color: rgba($color: variables.$light-on-primary, $alpha: 0.12);
+            }
+        }
+
+        &-disabled {
+            padding-left: 1.6rem;
+            padding-right: 2.4rem;
+            border-radius: 2rem;
+            background-color: rgba($color: variables.$light-on-surface, $alpha: 0.12);
+
+            .button__icon {
+                color: rgba($color: variables.$light-on-surface, $alpha: 0.38);
+            }
+
+            .button__label {
+                color: rgba($color: variables.$light-on-surface, $alpha: 0.38);
+            }
+        }
+
         .button__icon {
             color: variables.$light-on-primary;
         }
 
         .button__label {
             color: variables.$light-on-primary;
+        }
+
+        .button__state-layer {
+            border-radius: 2rem;
         }
     }
 
@@ -45,12 +112,45 @@
         border-radius: 2rem;
         background-color: variables.$light-secondary-container;
 
+        &:hover {
+            @include mixins.elevation-1;
+            .button__state-layer {
+                background-color: rgba($color: variables.$light-primary, $alpha: 0.08);
+            }
+        }
+
+        &:focus,
+        &:active {
+            .button__state-layer {
+                background-color: rgba($color: variables.$light-primary, $alpha: 0.12);
+            }
+        }
+
+        &-disabled {
+            padding-left: 1.6rem;
+            padding-right: 2.4rem;
+            border-radius: 2rem;
+            background-color: rgba($color: variables.$light-on-surface, $alpha: 0.12);
+
+            .button__icon {
+                color: rgba($color: variables.$light-on-surface, $alpha: 0.38);
+            }
+
+            .button__label {
+                color: rgba($color: variables.$light-on-surface, $alpha: 0.38);
+            }
+        }
+
         .button__icon {
             color: variables.$light-secondary-on-container;
         }
 
         .button__label {
             color: variables.$light-secondary-on-container;
+        }
+
+        .button__state-layer {
+            border-radius: 2rem;
         }
     }
 
@@ -61,12 +161,44 @@
         background-color: variables.$light-surface;
         border: 0.1rem solid map.get(variables.$palette-neutral-variant, "50");
 
+        &:hover {
+            .button__state-layer {
+                background-color: rgba($color: variables.$light-primary, $alpha: 0.08);
+            }
+        }
+
+        &:focus,
+        &:active {
+            .button__state-layer {
+                background-color: rgba($color: variables.$light-primary, $alpha: 0.12);
+            }
+        }
+
+        &-disabled {
+            padding-left: 1.6rem;
+            padding-right: 2.4rem;
+            border-radius: 2rem;
+            border: 0.1rem solid rgba($color: variables.$light-on-surface, $alpha: 0.12);
+
+            .button__icon {
+                color: rgba($color: variables.$light-on-surface, $alpha: 0.38);
+            }
+
+            .button__label {
+                color: rgba($color: variables.$light-on-surface, $alpha: 0.38);
+            }
+        }
+
         .button__icon {
             color: variables.$light-primary;
         }
 
         .button__label {
             color: variables.$light-primary;
+        }
+
+        .button__state-layer {
+            border-radius: 2rem;
         }
     }
 
@@ -75,6 +207,36 @@
         min-width: 4.8rem;
         padding-left: 1.2rem;
         padding-right: 1.2rem;
+
+        &:hover {
+            .button__state-layer {
+                border-radius: 2rem;
+                background-color: rgba($color: variables.$light-primary, $alpha: 0.08);
+            }
+        }
+
+        &:focus,
+        &:active {
+            .button__state-layer {
+                border-radius: 2rem;
+                background-color: rgba($color: variables.$light-primary, $alpha: 0.12);
+            }
+        }
+
+        &-disabled {
+            justify-content: center;
+            min-width: 4.8rem;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+
+            .button__icon {
+                color: rgba($color: variables.$light-on-surface, $alpha: 0.38);
+            }
+
+            .button__label {
+                color: rgba($color: variables.$light-on-surface, $alpha: 0.38);
+            }
+        }
 
         .button__icon {
             color: variables.$light-primary;
@@ -99,5 +261,13 @@
     &__label {
         @include mixins.text-label-lg;
         line-height: normal;
+    }
+
+    &__state-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }
