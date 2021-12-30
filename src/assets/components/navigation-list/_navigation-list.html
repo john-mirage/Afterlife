@@ -10,9 +10,7 @@
     <a class="navigation-list__item {% if active_tab == 'posts' %}navigation-list__item--active{% endif %}" href="{% url 'postsIndex' %}">
         <div class="navigation-list__icon-container">
             <span class="material-icons{% if active_tab != 'posts' %}-outlined{% endif %} navigation-list__icon">article</span>
-            <div class="badge navigation-list__badge">
-                <span class="typography typography--label-sm badge__label">30</span>
-            </div>
+            {% include "../badge/_badge.html" with badge_classes="navigation-list__badge" badge_count="30" %}
         </div>
         <span class="navigation-list__label">Posts</span>
     </a>

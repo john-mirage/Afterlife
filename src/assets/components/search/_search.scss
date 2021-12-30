@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '../../abstracts/variables';
-@use '../../abstracts/mixins';
+@use '../../utils/variables';
+@use '../../utils/mixins';
 
 .search {
     padding-top: 1.6rem;

@@ -22,10 +22,10 @@
     <body class="page">
 
         <!-- Top app bar -->
-        {% include "../components/top-app-bar.html" %}
+        {% include "../components/top-app-bar/_top-app-bar.html" %}
 
         <!-- Navigation rail-->
-        {% include "../components/navigation-rail.html" %}
+        {% include "../components/navigation-rail/_navigation-rail.html" %}
 
         <!-- Container -->
         <div class="container page__container">
@@ -35,18 +35,16 @@
                     {% block article %}{% endblock %}
                 </main>
 
-                <footer class="container__footer">
-                    <p class="typography typography--body-md">&copy; 2021 - Afterlife</p>
-                </footer>
+                {% include "../components/footer/_footer.html" %}
 
             </div>
         </div>
 
         <!-- Floating action button -->
-        {% include "../components/fab.html" with fab_type="extended" %}
+        {% include "../components/fab/_fab.html" with fab_type="extended" %}
 
         <!-- Navigation bar -->
-        {% include "../components/navigation-bar.html" %}
+        {% include "../components/navigation-bar/_navigation-bar.html" %}
 
         <script defer src="{% static 'bundle.js' %}"></script>
     </body>

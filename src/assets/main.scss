@@ -3,24 +3,24 @@
 
 // Components
 @use 'components/top-app-bar/top-app-bar';
-@use 'components/navigation/navigation-bar';
-@use 'components/navigation/navigation-rail';
-@use 'components/navigation/navigation-list';
+@use 'components/navigation-bar/navigation-bar';
+@use 'components/navigation-rail/navigation-rail';
+@use 'components/navigation-list/navigation-list';
 @use 'components/badge/badge';
-@use 'components/tab/tab-list';
+@use 'components/tab-list/tab-list';
 @use 'components/fab/fab';
 @use 'components/button/button';
 @use 'components/icon-button/icon-button';
-@use 'components/card/card-list';
 @use 'components/card/card';
-@use 'components/chip/chip-list';
+@use 'components/chip-list/chip-list';
 @use 'components/chip/chip';
 @use 'components/search/search';
 @use 'components/menu/menu';
 @use 'components/filter/filter';
 @use 'components/divider/divider';
+@use 'components/footer/footer';
 
 // Layouts
-@use 'layouts/page';
-@use 'layouts/container';
-@use 'layouts/article';
+@use 'layouts/page/page';
+@use 'layouts/container/container';
+@use 'layouts/article/article';

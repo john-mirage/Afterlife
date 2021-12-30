@@ -1,0 +1,11 @@
+<a class="button button--{{ button_variant }}" href="{% url button_link %}">
+
+    {% if button_icon %}
+    <span class="material-icons-outlined button__icon">{{ button_icon }}</span>
+    {% endif %}
+
+    <span class="button__label">{{ button_label }}</span>
+
+    <div class="button__state-layer"></div>
+
+</a>

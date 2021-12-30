@@ -1,0 +1,9 @@
+@use '../../utils/variables';
+@use '../../utils/mixins';
+
+.footer {
+
+    &__copyright {
+        @include mixins.text-body-md;
+    }
+}

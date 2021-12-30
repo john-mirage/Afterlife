@@ -1,6 +1,5 @@
-@use '../../abstracts/variables';
-@use '../../abstracts/mixins';
-
+@use '../../utils/variables';
+@use '../../utils/mixins';
 .divider {
     width: 100%;
     height: 0.1rem;
